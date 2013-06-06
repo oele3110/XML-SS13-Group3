@@ -3,6 +3,9 @@ XML-SS13-Group3
 
 XML SS2013 Group3 Project
 
+Link zur Veranstaltungsseite:
+http://blog.ag-nbi.de/2013/03/20/vorlesung-xml-technologien-3/
+
 Projektaufgabe:
 
 Das Paradigma des klassischen Web Browsers greift bei einem Hypertext Web, nicht aber bei einem Web of Data, bei dem Rohdaten angesprochen werden oder Metadaten im Quelltext des Hypertextes eingebettet sind. Ebenso stammt der klassische Web Browser noch aus der Zeit, wo man von einem Menschen vor einem Computerarbeitsplatz ausging. Die vielfältigen Endgeräte der heutigen Zeit machen Schwächen des heutigen Browserkonzepts nicht zuletzt an Problemen der Synchronisation von Lesezeichen spürbar. Es ist sicher auch die Frage zulässig, ob ein Browser heutzutage überhaupt noch ein reiner Client sein muss oder ob er nicht auch gleichzeitig ein Server sein kann, der durch Nutzerinteraktion gewonnene Informationen wieder im Web zur Verfügung stellt (z.B. Verlaufsinformationen).
