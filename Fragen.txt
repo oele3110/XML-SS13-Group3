@@ -1,0 +1,2 @@
+- Dürfen wir externe Projekte integrieren (z.B. von Github)?
+- Woher kommt das JSON-Objekt (dass später geparsed werden soll)?
