@@ -26,6 +26,12 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         pass
+    
+    def parse_links(self, html_str):
+        html_str = html_str.replace("RET_URL:", "/?action='retrieve'&params='")
+        html_str = html_str.replace("HIS_URL:", "/?action='history'&params='")
+        return html_str
+        
 
     def create_body(self):
         #debug(self.url)
@@ -38,6 +44,8 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
                 params = self.url_params
             action = HANDLERS[self.url_params["action"][0]]
             ret = action(self.url, params)
+
+        ret = self.parse_links(ret)
 
         self.wfile.write(OUTPUT_TEMPLATE % ret)
         pass
