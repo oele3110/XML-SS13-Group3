@@ -29,7 +29,10 @@ from twisted.python import log
 import re
 import sys
 
-log.startLogging(sys.stdout)
+#modified begin
+#disable logging
+#log.startLogging(sys.stdout)
+#modified end
 
 class ProxyClient(http.HTTPClient):
     """ The proxy client connects to the real server, fetches the resource and
@@ -138,6 +141,10 @@ class ProxyRequest(http.Request):
         self.reactor.connectTCP(host, port, factory)
 
     def processResponse(self, data):
+        #modified begin
+        import proxy_filter
+        data = proxy_filter.filter(self, data)
+        #modified end
         return data
 
 class TransparentProxy(http.HTTPChannel):
@@ -146,10 +153,13 @@ class TransparentProxy(http.HTTPChannel):
 class ProxyFactory(http.HTTPFactory):
     protocol = TransparentProxy
  
+#modfied begin
 #reactor.listenTCP(8080, ProxyFactory())
 #reactor.run()
 
 def get_proxy_server(port):
     import threading
+    log.startLogging(open("/dev/null", "w"))#stop logging
     reactor.listenTCP(port, ProxyFactory())
     return threading.Thread(target=reactor.run)
+#modified end
