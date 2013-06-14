@@ -51,11 +51,11 @@ def parse(inputFile, outputFile):
 		
 		# itemprop = image
 		if matchObj2:
-			output += '\t<itemprop>\n\t\t<type>' + matchObj2.group(2) + '</type>\n\t\t<href>' + matchObj2.group(4) + '</href>\n\t</itemprop>\n'
+			output += '\t<itemprop type="' + matchObj2.group(2) + '">\n\t\t<href>' + matchObj2.group(4) + '</href>\n\t</itemprop>\n'
 		
 		# itemprop = name
 		if matchObj3:
-			output += '\t<itemprop>\n\t\t<type>' + matchObj3.group(2) + '</type>\n\t\t<content>' + matchObj3.group(3) + '</content>\n\t</itemprop>\n'
+			output += '\t<itemprop type="' + matchObj3.group(2) + '">\n\t\t<content>' + matchObj3.group(3) + '</content>\n\t</itemprop>\n'
 		
 		# itemprop = description
 		if matchDescr:
@@ -83,7 +83,7 @@ def parse(inputFile, outputFile):
 		
 		if matchObj4:
 			matchDescr = True
-			output += '\t<itemprop>\n\t\t<type>' + matchObj4.group(2) + '</type>\n\t\t<content>'
+			output += '\t<itemprop type="' + matchObj4.group(2) + '">\n\t\t<content>'
 
 	output += '</itemscope>'
 	
