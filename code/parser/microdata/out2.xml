@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
+<itemscope itemtype="http://schema.org/Article">
+	<itemprop>
+		<type>image</type>
+		<href>http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png</href>
+	</itemprop>
+	<itemprop>
+		<type>name</type>
+		<content><a href="/questions/17112930/downloaded-file-extention-has-a-in-it" class="question-hyperlink">downloaded file extention has a &ldquo;;&rdquo; in it</a></content>
+	</itemprop>
+	<itemprop>
+		<type>description</type>
+		<content><p>I am using a force download script to avoid streaming of mp3 files in my site. So the file has to be renamed to work !!</p>\n\n<p>What is the problem here ?</p>\n\n<pre><code>&lt;?php\n$file=str_replace("\0", null, htmlspecialchars($_GET['file']));\n$name = $_GET['name'];\nheader ("Content-type: octet/stream");\nheader ("Content-disposition: attachment; filename=".$name.";");\nreadfile($file);\nexit;\n?&gt;\n</code></pre>\n</content>
+	</itemprop>
+</itemscope>

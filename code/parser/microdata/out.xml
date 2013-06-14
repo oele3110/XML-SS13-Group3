@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
+<itemscope itemtype="http://schema.org/Article">
+	<itemprop>
+		<type>image</type>
+		<href>http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png</href>
+	</itemprop>
+	<itemprop>
+		<type>name</type>
+		<content><a href="/questions/16947226/how-to-tell-if-webpage-is-running-in-chrome-application-shortcut-mode" class="question-hyperlink">How to tell if webpage is running in chrome application shortcut mode</a></content>
+	</itemprop>
+	<itemprop>
+		<type>description</type>
+		<content><p>We can create application shortcut in google Chrome. I would like to display a different layout when my web page is running in application shortcut mode - which basically is running in a separate standalone window.</p>\n\n<p>Is there a way to tell if web page is running in application shortcut mode?</p>\n\n<p>Right now I am testing if the window can be re-sized by JavaScript - assuming that it is running in application shortcut mode if the window can be re-sized.</p>\n\n<p>I am wondering if there is a better way to do this.</p>\n\n<p>[Update] Basically we want to know if the webpage is running in a single window or running in one tab of a window.</p>\n\n</content>
+	</itemprop>
+</itemscope>
