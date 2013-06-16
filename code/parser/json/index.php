@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 1);
-require_once('TwitterAPIExchange.php');
+require_once('twitterAPIExchange.php');
 
 // Set access tokens here - see: https://dev.twitter.com/apps/
 $settings = array(
