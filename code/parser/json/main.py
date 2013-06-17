@@ -28,13 +28,13 @@ def parse(inputFile, outputFile):
     #data = json.dumps(tmp, sort_keys=True, indent=2) # use json.dumps because of possibility of using different options
 
     # header
-    output = '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n<itemscope>\n\t'
+    output = '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n<tweet>\n\t'
 
     # name
     output += '<user>\n\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t'
     
     # twitter-name
-    output += '<screen_name>' + tmp[0]['user']['screen_name'] + '</screen_name>\n\t\t'
+    output += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t'
     
     # followers
     output += '<followers_count>' + str(tmp[0]['user']['followers_count']) + '</followers_count>\n\t\t'
@@ -52,7 +52,7 @@ def parse(inputFile, outputFile):
     output += '<created_at>' + tmp[0]['created_at'] + '</created_at>\n'
 
     # tail
-    output += '</itemscope>'
+    output += '</tweet>'
 
     output = u''.join(output).encode('utf-8').strip()
     
