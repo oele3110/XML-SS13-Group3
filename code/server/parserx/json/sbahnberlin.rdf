@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<rdf:Description rdf:about="">
+		<tweet>
+			<rdf:Description rdf:about="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin&count=1">
+				<user>
+					<rdf:Description rdf:about="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin">
+						<name>DB S-Bahn Berlin</name>
+						<twitter_name>SBahnBerlin</twitter_name>
+						<followers_count>14124</followers_count>
+						<statuses_count>28610</statuses_count>
+					</rdf:Description>
+				</user>
+				<retweet_count>0</retweet_count>
+				<text>Ines macht jetzt Feierabend und wünscht einen schönen Nachmittag mit Maya, die Euch ab jetzt informiert.</text>
+				<created_at>Tue Jun 18 12:00:45 +0000 2013</created_at>
+			</rdf:Description>
+		</tweet>
+	</rdf:Description>
+</rdf:RDF>
