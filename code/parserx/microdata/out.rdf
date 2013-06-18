@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<itemscope>
+		<rdf:Description rdf:about="http://schema.org/Article">
+			<itemprop>
+				<rdf:Description rdf:about="image">
+					<href>http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png</href>
+				</rdf:Description>
+			</itemprop>
+			<itemprop>
+				<rdf:Description rdf:about="name">
+					<name><a href="/questions/16947226/how-to-tell-if-webpage-is-running-in-chrome-application-shortcut-mode" class="question-hyperlink">How to tell if webpage is running in chrome application shortcut mode</a></name>
+				</rdf:Description>
+			</itemprop>
+			<itemprop>
+				<rdf:Description rdf:about="description">
+					<description><p>We can create application shortcut in google Chrome. I would like to display a different layout when my web page is running in application shortcut mode - which basically is running in a separate standalone window.</p>\n\n<p>Is there a way to tell if web page is running in application shortcut mode?</p>\n\n<p>Right now I am testing if the window can be re-sized by JavaScript - assuming that it is running in application shortcut mode if the window can be re-sized.</p>\n\n<p>I am wondering if there is a better way to do this.</p>\n\n<p>[Update] Basically we want to know if the webpage is running in a single window or running in one tab of a window.</p>\n\n</description>
+				</rdf:Description>
+			</itemprop>
+		</rdf:Description>
+	</itemscope>
+</rdf:RDF>
