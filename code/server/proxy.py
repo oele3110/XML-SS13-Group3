@@ -159,7 +159,7 @@ class ProxyFactory(http.HTTPFactory):
 
 def get_proxy_server(port):
     import threading
-    log.startLogging(open("/dev/null", "w"))#stop logging
+    log.startLogging(open(".log", "w"))#stop logging
     reactor.listenTCP(port, ProxyFactory())
     return threading.Thread(target=reactor.run)
 #modified end
