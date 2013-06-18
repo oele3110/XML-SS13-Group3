@@ -1,6 +1,8 @@
 import re
 import sys
 
+from logging_wrapper import *
+
 def openReadFile(file):
 	f = open(file,'r')
 	return f
@@ -118,7 +120,10 @@ def parse(inputFile, outputFile):
 	f2.write(outputRdf)
 
 def parse2(url, input):
-	
+
+	info(url)
+	info(input[:100])
+
 	if not url:
 		url = ''
 	
@@ -206,7 +211,7 @@ def parse2(url, input):
 	return outputRdf
 
 def run(url, input):
-	inputArray = re.split("\n", input)
+	inputArray = re.split("\r\n", input)
 	rdf = parse2(url, inputArray)
 	return rdf
 	
