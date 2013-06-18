@@ -143,8 +143,36 @@ class ProxyRequest(http.Request):
     def processResponse(self, data):
         #modified begin
         import proxy_filter
+        from logging_wrapper import info
+
+        content_encoding = self.responseHeaders.getRawHeaders(
+            "content-encoding")
+        content_types = self.responseHeaders.getRawHeaders(
+            "content-type")
+        gzipped = data and content_encoding\
+            and any([x.find("gzip") >= 0 for x in content_encoding])\
+            and content_types and any([x.find("text/html") >= 0 for x in content_types])
+
+        if gzipped:
+            import gzip
+            from StringIO import StringIO
+            info("Decompress response")
+            buf = StringIO(data)
+            s = gzip.GzipFile(mode="rb", fileobj=buf)
+            data = s.read()
+
         data = proxy_filter.filter(self, data)
-        #modified end
+        if gzipped:
+            #self.responseHeaders.removeHeader("content-encoding")
+            import gzip
+            from StringIO import StringIO
+            buf = StringIO()
+            s = gzip.GzipFile(mode="wb", fileobj=buf, compresslevel=2)
+            s.write(data)
+            s.close()
+            data = buf.getvalue()
+
+        # #modified end
         return data
 
 class TransparentProxy(http.HTTPChannel):
