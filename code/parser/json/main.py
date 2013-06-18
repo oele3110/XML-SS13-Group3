@@ -29,7 +29,7 @@ def execPHPScript(url, getfield):
     # and stores it into a .json-file
     subprocess.call(cmd.split(), stdout=openWriteFile(inputFile))
 
-def parse(inputFile, outputFile):
+def parse(inputFile, outputFile, userURL):
     f = openReadFile(inputFile)
     tmp = json.load(f)  # load data from file
     #data = json.dumps(tmp, sort_keys=True, indent=2) # use json.dumps because of possibility of using different options
@@ -43,7 +43,7 @@ def parse(inputFile, outputFile):
 
     # name
     output += '<user>\n\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t'
-    outputRdf += '<rdf:Description rdf:about="">\n\t\t\t\t<user>\n\t\t\t\t\t<rdf:Description rdf:about="">\n\t\t\t\t\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t\t\t\t\t'
+    outputRdf += '<rdf:Description rdf:about="' + sys.argv[1] + '">\n\t\t\t\t<user>\n\t\t\t\t\t<rdf:Description rdf:about="' + userURL + '">\n\t\t\t\t\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t\t\t\t\t'
     
     # twitter-name
     output += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t'
@@ -86,13 +86,15 @@ def main():
     if len(sys.argv) != 2:
         print 'run as: python main.py <url>'
     else:
-        completeUrl = sys.argv[1]
-        # split url with delimiter "?" in 3 elements (stored in a list)
-        splittedUrl = re.split("([?])", completeUrl)
+        completeUrl = sys.argv[1]        
+        # split url with delimiter "?" and "&" in 5 elements (stored in a list)
+        splittedUrl = re.split("([?, &])", completeUrl)
         url = splittedUrl[0]
         getfield = splittedUrl[1] + splittedUrl[2]
+        userURL = splittedUrl[0] + splittedUrl[1] + splittedUrl[2]
         #command = "php index.php https://api.twitter.com/1.1/statuses/user_timeline.json ?screen_name=sbahnberlin&count=1"
         execPHPScript(url, getfield)
-        parse(inputFile, outputFile)
+        # pass among other things userURL for .rdf-file
+        parse(inputFile, outputFile, userURL)
 
 main()
