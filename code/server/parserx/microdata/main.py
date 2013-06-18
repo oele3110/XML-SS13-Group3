@@ -15,7 +15,7 @@ def initRdf():
 def initXml():
 	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'
 
-def parse2(inputFile, outputFile):
+def parse(inputFile, outputFile):
 	
 	#inputFile = 'sample.htm'
 	#outputFile = 'output.xml'
@@ -215,6 +215,6 @@ def main():
 		print 'input file: ' + inputFile
 		print 'output file: ' + outputFile
 		print 'start parsing file'
-		parse2(inputFile, outputFile)
+		parse(inputFile, outputFile)
 
 # main()
