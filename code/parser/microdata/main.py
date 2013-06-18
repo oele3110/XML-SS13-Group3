@@ -202,7 +202,7 @@ def parse2(url, input):
 
 def run(url, input):
 	inputArray = re.split("\n", input)
-	rdf = parse(url, inputArray)
+	rdf = parse2(url, inputArray)
 	return rdf
 	
 
