@@ -128,6 +128,7 @@ def parse2(url, input):
 	strMatch4 = ''
 	match6a = False
 	match7a = False
+	foundItemscope = False
 	
 	
 	for line in input:
@@ -157,6 +158,7 @@ def parse2(url, input):
 		
 		# itemscope itemtype
 		if matchObj1:
+			foundItemscope = True
 			outputRdf += '\n\t<itemscope>\n\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
 		
 		# itemprop = image
@@ -196,7 +198,10 @@ def parse2(url, input):
 			strMatch4 = matchObj4.group(2)
 			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj4.group(2) + '">\n\t\t\t\t\t<' + matchObj4.group(2) + '>'
 
-	outputRdf += '\n\t\t</rdf:Description>\n\t</itemscope>\n</rdf:RDF>'
+	if foundItemscope:
+		outputRdf += '\n\t\t</rdf:Description>\n\t</itemscope>'
+	
+	outputRdf += '\n</rdf:RDF>'
 	
 	return outputRdf
 
