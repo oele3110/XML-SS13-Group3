@@ -119,7 +119,7 @@ def parse2(inputFile, outputFile):
 
 def parse2(url, input):
 	
-	if !url:
+	if not url:
 		url = ''
 	
 	outputRdf = initRdf()
