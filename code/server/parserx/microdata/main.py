@@ -1,7 +1,7 @@
 import re
 import sys
 
-#from logging_wrapper import *
+from logging_wrapper import *
 
 def openReadFile(file):
 	f = open(file,'r')
@@ -161,8 +161,7 @@ def parse2(url, input):
 			matchObj7b = re.match(pattern7b, line)
 			matchObj8 = re.match(pattern8, line)
 		
-		
-				# itemscope itemtype
+		# itemscope itemtype
 		if matchObj1:
 			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
 		
