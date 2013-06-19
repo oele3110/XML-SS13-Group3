@@ -1,7 +1,7 @@
 import re
 import sys
 
-from logging_wrapper import *
+# from logging_wrapper import *
 
 def openReadFile(file):
 	f = open(file,'r')
@@ -122,8 +122,8 @@ def parse(inputFile, outputFile):
 
 def parse2(url, input):
 
-	info(url)
-	info(input[:100])
+	# info(url)
+	# info(input[:100])
 
 	if not url:
 		url = ''
