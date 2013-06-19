@@ -1,7 +1,7 @@
 import re
 import sys
 
-from logging_wrapper import *
+#from logging_wrapper import *
 
 def openReadFile(file):
 	f = open(file,'r')
@@ -12,7 +12,7 @@ def openWriteFile(file):
 	return f
 
 def initRdf():
-	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">'
+	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:md="http://www.w3.org/ns/md">'
 
 def initXml():
 	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'
@@ -31,6 +31,8 @@ def parse(inputFile, outputFile):
 	strMatch4 = ''
 	match6a = False
 	match7a = False
+	
+	url = "http://stackoverflow.com"
 	
 	
 	for line in f:
@@ -60,58 +62,57 @@ def parse(inputFile, outputFile):
 		
 		# itemscope itemtype
 		if matchObj1:
-			output += '<itemscope itemtype="' + matchObj1.group(3) + '">\n'
-			outputRdf += '\n\t<itemscope>\n\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			# output += '<md:itemscope itemtype="' + matchObj1.group(3) + '">\n'
+			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
 		
 		# itemprop = image
 		if matchObj2:
-			output += '\t<itemprop type="' + matchObj2.group(2) + '">\n\t\t<href>' + matchObj2.group(4) + '</href>\n\t</itemprop>\n'
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj2.group(2) + '">\n\t\t\t\t\t<href>' +  matchObj2.group(4) + '</href>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+			# output += '\t<md:itemprop type="' + matchObj2.group(2) + '">\n\t\t<md:url>' + matchObj2.group(4) + '</md:url>\n\t</md:itemprop>\n'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		# itemprop = name
 		if matchObj3:
-			output += '\t<itemprop type="' + matchObj3.group(2) + '">\n\t\t<content>' + matchObj3.group(3) + '</content>\n\t</itemprop>\n'
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj3.group(2) + '">\n\t\t\t\t\t<' + matchObj3.group(2) + '>' + matchObj3.group(3) + '</' + matchObj3.group(2) + '>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+			# output += '\t<itemprop type="' + matchObj3.group(2) + '">\n\t\t<md:content>' + matchObj3.group(3) + '</content>\n\t</md:itemprop>\n'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>' + matchObj3.group(3) + '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		# itemprop = description
 		if matchDescr:
 			
 			# <p>
 			if matchObj5:
-				output += '<p>' + matchObj5.group(1) + "</p>\\n\\n"
-				outputRdf += '<p>' + matchObj5.group(1) + "</p>\\n\\n"
+				# output += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
 			elif matchObj6a:
-				output += '<p>' + matchObj6a.group(1) + " "
-				outputRdf += '<p>' + matchObj6a.group(1) + " "
+				# output += '&lt;p&gt;' + matchObj6a.group(1) + " "
+				outputRdf += '&lt;p&gt;' + matchObj6a.group(1) + " "
 			elif matchObj6b:
-				output += matchObj6b.group(1) + "</p>\\n\\n"
-				outputRdf += matchObj6b.group(1) + "</p>\\n\\n"
+				# output += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
 			# <code>
 			elif matchObj7a:
 				match7a = True
-				output+= matchObj7a.group(1) + '\\n'
+				# output+= matchObj7a.group(1) + '\\n'
 				outputRdf += matchObj7a.group(1) + '\\n'
 			elif matchObj7b:
 				match7a = False
-				output += matchObj7b.group(1) + '\\n'
+				# output += matchObj7b.group(1) + '\\n'
 				outputRdf += matchObj7b.group(1) + '\\n'
 			elif match7a:
-				output += re.match('(.*)',line).group(1) + '\\n'
+				# output += re.match('(.*)',line).group(1) + '\\n'
 				outputRdf += re.match('(.*)',line).group(1) + '\\n'
 			# </div>
 			elif matchObj8:
 				matchDescr = False
-				output += '</content>\n\t</itemprop>\n'
-				outputRdf += '</' + strMatch4 + '>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+				# output += '</md:text>\n\t</md:itemprop>\n'
+				outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		if matchObj4:
 			matchDescr = True
-			strMatch4 = matchObj4.group(2)
-			output += '\t<itemprop type="' + matchObj4.group(2) + '">\n\t\t<content>'
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj4.group(2) + '">\n\t\t\t\t\t<' + matchObj4.group(2) + '>'
+			# output += '\t<md:itemprop type="' + matchObj4.group(2) + '">\n\t\t<md:text>'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
 
-	output += '</itemscope>'
-	outputRdf += '\n\t\t</rdf:Description>\n\t</itemscope>\n</rdf:RDF>'
+	# output += '</md:itemscope>'
+	outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>\n</rdf:RDF>'
 	
 	#f = openWriteFile(outputFile)
 	#f.write(output)
@@ -161,29 +162,28 @@ def parse2(url, input):
 			matchObj8 = re.match(pattern8, line)
 		
 		
-		# itemscope itemtype
+				# itemscope itemtype
 		if matchObj1:
-			foundItemscope = True
-			outputRdf += '\n\t<itemscope>\n\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
 		
 		# itemprop = image
 		if matchObj2:
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj2.group(2) + '">\n\t\t\t\t\t<href>' +  matchObj2.group(4) + '</href>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		# itemprop = name
 		if matchObj3:
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj3.group(2) + '">\n\t\t\t\t\t<' + matchObj3.group(2) + '>' + matchObj3.group(3) + '</' + matchObj3.group(2) + '>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>' + matchObj3.group(3) + '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		# itemprop = description
 		if matchDescr:
 			
 			# <p>
 			if matchObj5:
-				outputRdf += '<p>' + matchObj5.group(1) + "</p>\\n\\n"
+				outputRdf += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
 			elif matchObj6a:
-				outputRdf += '<p>' + matchObj6a.group(1) + " "
+				outputRdf += '&lt;p&gt;' + matchObj6a.group(1) + " "
 			elif matchObj6b:
-				outputRdf += matchObj6b.group(1) + "</p>\\n\\n"
+				outputRdf += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
 			# <code>
 			elif matchObj7a:
 				match7a = True
@@ -196,17 +196,13 @@ def parse2(url, input):
 			# </div>
 			elif matchObj8:
 				matchDescr = False
-				outputRdf += '</' + strMatch4 + '>\n\t\t\t\t</rdf:Description>\n\t\t\t</itemprop>'
+				outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
 		
 		if matchObj4:
 			matchDescr = True
-			strMatch4 = matchObj4.group(2)
-			outputRdf += '\n\t\t\t<itemprop>\n\t\t\t\t<rdf:Description rdf:about="' + matchObj4.group(2) + '">\n\t\t\t\t\t<' + matchObj4.group(2) + '>'
-
-	if foundItemscope:
-		outputRdf += '\n\t\t</rdf:Description>\n\t</itemscope>'
+			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
 	
-	outputRdf += '\n</rdf:RDF>'
+	outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>\n</rdf:RDF>'
 	
 	return outputRdf
 
@@ -227,4 +223,4 @@ def main():
 		print 'start parsing file'
 		parse(inputFile, outputFile)
 
-# main()
+main()
