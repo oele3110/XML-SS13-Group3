@@ -31,6 +31,7 @@ def parse(inputFile, outputFile):
 	strMatch4 = ''
 	match6a = False
 	match7a = False
+	isMicrodata = False
 	
 	url = "http://stackoverflow.com"
 	
@@ -64,6 +65,7 @@ def parse(inputFile, outputFile):
 		if matchObj1:
 			# output += '<md:itemscope itemtype="' + matchObj1.group(3) + '">\n'
 			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			isMicrodata = True
 		
 		# itemprop = image
 		if matchObj2:
@@ -112,7 +114,10 @@ def parse(inputFile, outputFile):
 			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
 
 	# output += '</md:itemscope>'
-	outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>\n</rdf:RDF>'
+	if isMicrodata:
+		outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>'
+	
+	outputRdf += '\n</rdf:RDF>'
 	
 	#f = openWriteFile(outputFile)
 	#f.write(output)
@@ -135,6 +140,7 @@ def parse2(url, input):
 	match6a = False
 	match7a = False
 	foundItemscope = False
+	isMicrodata = False
 	
 	
 	for line in input:
@@ -164,6 +170,7 @@ def parse2(url, input):
 		# itemscope itemtype
 		if matchObj1:
 			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			isMicrodata = True
 		
 		# itemprop = image
 		if matchObj2:
@@ -201,7 +208,10 @@ def parse2(url, input):
 			matchDescr = True
 			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
 	
-	outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>\n</rdf:RDF>'
+	if isMicrodata:
+		outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>'
+		
+	outputRdf += '\n</rdf:RDF>'
 	
 	return outputRdf
 
