@@ -12,7 +12,7 @@ def openWriteFile(file):
 	return f
 
 def initRdf():
-	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:md="http://www.w3.org/ns/md">'
+	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:md="http://www.w3.org/ns/md/">'
 
 def initXml():
 	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'
