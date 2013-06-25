@@ -1,0 +1,5 @@
+      <binding name="s"><uri>http://stackoverflow.com/questions/17297871/how-to-check-all-items-match-in-an-array-using-javascript-jquery</uri></binding>
+      <binding name="p"><uri>http://www.w3.org/2001/XMLSchema#dateTime</uri></binding>
+      <binding name="o"><literal>2013-06-25 15:18:59</literal></binding>
+
+4s-query demo "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT * WHERE {?s xsd:dateTime ?o}"
