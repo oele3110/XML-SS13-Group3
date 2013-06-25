@@ -98,7 +98,6 @@ def main(completeUrl):
     parse(inputFile, outputFile, userURL)
 
 if __name__ == "__main__":
-    main()
     if len(sys.argv) != 2:
         print 'run as: python main.py <url>'
     else:
