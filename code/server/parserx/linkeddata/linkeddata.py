@@ -167,5 +167,4 @@ def main():
 		print 'creating subject-based RDF file'
 		parse(inputFile, outputFile, resource)
 #main()
-print run("http://dbpedia.org/resource/Klaus_Wowereit")
-
+#print run("http://dbpedia.org/resource/Klaus_Wowereit")
