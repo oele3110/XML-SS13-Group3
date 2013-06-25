@@ -28,6 +28,7 @@ from twisted.internet import reactor, protocol
 from twisted.python import log
 import re
 import sys
+import rdf
 
 #modified begin
 #disable logging
@@ -87,7 +88,8 @@ class ProxyClient(http.HTTPClient):
     def handleResponse(self, data):
         if self.originalRequest.host.host == "api.twitter.com":
             from parserx.json import main
-            data, rdf = main.main(self.uri)
+            data, rdf_ = main.main(self.uri)
+            rdf.importDatasets(rdf_)
             #self.originalRequest.responseHeaders.setRawHeaders(
             #    "content-type", ["application/json"])
             self.originalRequest.responseHeaders.setRawHeaders(
@@ -194,7 +196,7 @@ class ProxyFactory(http.HTTPFactory):
 
 def get_proxy_server(port):
     import threading
-    log.startLogging(open(".log", "w"))#stop logging
+    #log.startLogging(open(".log", "w"))#stop logging
     reactor.listenTCP(port, ProxyFactory())
     return threading.Thread(target=reactor.run)
 #modified end

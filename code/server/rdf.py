@@ -25,8 +25,10 @@ def connectDatabase():
         output = subprocess.call(["4s-backend",DBNAME])
         if output == 0:
                 info("connected to"+DBNAME+"\n")
+                return True
         else:
                 info("failure: already connected to"+DBNAME+"\n")
+                return False
 
 
 def disconnectDatabase():
@@ -38,7 +40,7 @@ def disconnectDatabase():
                 info("failure: already disconnected to"+DBNAME+"\n")
 
 
-def importDatasets(file):
+def importDatasetsFile(file):
         output = subprocess.call(["4s-import",DBNAME,file])
         if output == 0:
                 info("data is added\n")
@@ -53,7 +55,7 @@ def importDatasets(data):
         f.flush()
         f.close()
         
-        importDatasets(DBNAME, temp_file)
+        importDatasetsFile(temp_file)
         
         if os.path.isfile(temp_file):
             os.remove(temp_file)

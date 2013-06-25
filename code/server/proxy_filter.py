@@ -2,6 +2,7 @@ __all__=["filter"]
 
 from logging_wrapper import *
 from parserx.microdata import main
+import rdf
 
 def filter(request, data):
     try:
@@ -12,7 +13,8 @@ def filter(request, data):
             if request.host.host == "stackoverflow.com" and\
                     any([x.find("text/html") >= 0 for x in content_types]):
                 info("Filter stack overflow text/html resource.")
-                x = main.run(request.uri, data)
+                rdf_ = main.run(request.uri, data)
+                rdf.importDatasets(rdf_)
                 info("Parser result: %s" % x)
             else:
                 info("Unknown content type, skip filtering")

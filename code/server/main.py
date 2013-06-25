@@ -2,11 +2,18 @@ from http import get_http_server
 from proxy import get_proxy_server
 from logging_wrapper import *
 import time
+import rdf
 
 HTTP_PORT = 8345
 PROXY_PORT = 8346
 
 def launch_servers():
+    rdf.disconnectDatabase()
+    if not rdf.connectDatabase():
+        rdf.createDatabase()
+        rdf.connectDatabase()
+
+
     http_server = get_http_server(HTTP_PORT)
     proxy_server = get_proxy_server(PROXY_PORT)
     
@@ -22,6 +29,7 @@ def launch_servers():
         #    time.sleep(10)
     except KeyboardInterrupt:#caught in proxy_server...
         info("Quit!")
+        rdf.disconnectDatabase()
     pass
 
 if __name__ == "__main__":
