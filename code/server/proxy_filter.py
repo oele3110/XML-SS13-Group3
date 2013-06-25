@@ -2,6 +2,7 @@ __all__=["filter"]
 
 from logging_wrapper import *
 from parserx.microdata import main
+from parserx.linkeddata import linkeddata
 import rdf
 
 def filter(request, data):
