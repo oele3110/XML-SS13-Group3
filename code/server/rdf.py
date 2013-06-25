@@ -1,8 +1,9 @@
 import os
 import subprocess
 from logging_wrapper import info
+import time
 
-DBNAME = "rdfDB"
+DBNAME = "xml"
 
 
 def createDatabase():
@@ -49,7 +50,7 @@ def importDatasetsFile(file):
 
 
 def importDatasets(data):
-        temp_file = "data.rdf"
+        temp_file = str(time.time()) + "data.rdf"
         f = open(temp_file, "w")
         f.write(data)
         f.flush()
