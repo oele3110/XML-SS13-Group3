@@ -2,6 +2,7 @@ import re
 import sys
 import subprocess
 import json
+import datetime
 
 # Terminal: python main.py https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin\&count=1
 
@@ -21,7 +22,10 @@ def openWriteFile(file):
 	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'"""
 
 def initRDF():
-	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n\t'
+	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:sioc="http://rdfs.org/sioc/ns#"\n\txmlns:dcterms="http://purl.org/dc/terms#"\n\txmlns:xsd="http://www.w3.org/2001/XMLSchema#">\n\t'
+
+def getTimestamp():
+	return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S');
 
 def execPHPScript(url, getfield):
     if __name__ == "__main__":
@@ -32,7 +36,7 @@ def execPHPScript(url, getfield):
     # and stores it into a .json-file
     subprocess.call(cmd.split(), stdout=openWriteFile(inputFile))
 
-def parse(inputFile, outputFile, completeURL, userURL):
+def parse(inputFile, outputFile, completeURL, userURL, splittedUrl):
     f = openReadFile(inputFile)
     tmp = json.load(f)  # load data from file
     #data = json.dumps(tmp, sort_keys=True, indent=2) # use json.dumps because of possibility of using different options
@@ -40,15 +44,48 @@ def parse(inputFile, outputFile, completeURL, userURL):
     #output = initXML()
     outputRdf = initRDF()
     
-    # root
+    # root - tweet
     #output += '<tweet>\n\t'
-    outputRdf += '<rdf:Description rdf:about="">\n\t\t<tweet>\n\t\t\t'
-
-    # name
-    #output += '<user>\n\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t'
-    outputRdf += '<rdf:Description rdf:about="' + completeURL + '">\n\t\t\t\t<user>\n\t\t\t\t\t<rdf:Description rdf:about="' + userURL + '">\n\t\t\t\t\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t\t\t\t\t'
+    outputRdf += '<rdf:Description rdf:about="' + userURL + '&amp;' + splittedUrl[4] + '">\n\t\t'
     
-    # twitter-name
+    # xsd:dateTime
+    outputRdf += '<xsd:dateTime>' + getTimestamp() + '</xsd:dateTime>\n\t\t'
+
+    # dcterms:publisher
+    #output += '<user>\n\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t'
+    outputRdf += '<dcterms:publisher rdf:resource="' + userURL + '"/>\n\t\t'
+    
+    # sioc:content
+    outputRdf += '<sioc:content>' + tmp[0]['text'] + '</sioc:content>\n\t\t'
+    
+    # sioc:num_replies
+    outputRdf += '<sioc:num_replies>' + str(tmp[0]['retweet_count']) + '</sioc:num_replies>\n\t\t'
+    
+    # dcterms:created_at
+    outputRdf += '<dcterms:created_at>' + tmp[0]['created_at'] + '</dcterms:created_at>\n\t</rdf:Description>\n\t'
+    
+    # root - twitter user
+    outputRdf += '<rdf:Description rdf:about="' + userURL + '">\n\t\t'
+    
+    # sioc:name
+    outputRdf += '<sioc:name>' + tmp[0]['user']['screen_name'] + '</sioc:name>\n\t\t'
+    
+    # sioc:account_of
+    outputRdf += '<sioc:account_of>' + tmp[0]['user']['name'] + '</sioc:account_of>\n\t\t'
+    
+    # TODO - followers
+    #outputRdf += '<>' + str(tmp[0]['user']['followers_count']) + '</>'
+    
+    # sioc:num_items
+    outputRdf += '<sioc:num_items>' + str(tmp[0]['user']['statuses_count']) + '</sioc:num_items>\n\t'
+    
+    # tail
+    outputRdf += '</rdf:Description>\n</rdf:RDF>'
+    
+    outputRdf = u''.join(outputRdf).encode('utf-8').strip()
+    
+    
+    """# twitter-name
     #output += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t'
     outputRdf += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t\t\t\t\t'
     
@@ -80,7 +117,7 @@ def parse(inputFile, outputFile, completeURL, userURL):
     outputRdf = u''.join(outputRdf).encode('utf-8').strip()
     
     #f = openWriteFile(outputFile)
-    #f.write(str(output))
+    #f.write(str(output))"""
 
     if __name__ == "__main__":
         f2 = openWriteFile(outputFile2)
@@ -98,7 +135,7 @@ def main(completeUrl):
     #command = "php index.php https://api.twitter.com/1.1/statuses/user_timeline.json ?screen_name=sbahnberlin&count=1"
     execPHPScript(url, getfield)
     # pass among other things userURL for .rdf-file
-    return parse(inputFile, outputFile, completeUrl, userURL)
+    return parse(inputFile, outputFile, completeUrl, userURL, splittedUrl)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
