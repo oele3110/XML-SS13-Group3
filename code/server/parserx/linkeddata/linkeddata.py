@@ -144,17 +144,15 @@ def parse2(resource, rdfData):
 # string URL: dbpedia resource URI http://dbpedia.org/resource/Klaus_Wowereit 
 def run(url):
 	
-	try:
-		url.index ("http://dbpedia.org/resource/")
-	except ValueError:
-		print "Oops! That was no valid /resource/ dbpedia link..."
-
-	rdf_url = url.replace("/resource/", "/data/", 1)
-	response = urllib2.urlopen(rdf_url)
-	html = response.read()
-	lines = html.splitlines()
-
-	return parse2(url, lines)
+	if url.find("http://dbpedia.org/resource/") != -1:
+		rdf_url = url.replace("/resource/", "/data/", 1)
+		response = urllib2.urlopen(rdf_url)
+		html = response.read()
+		lines = html.splitlines()
+		return parse2(url, lines)
+	else:
+		response = urllib2.urlopen(rdf_url)
+		return response.read()
 
 def main():
 	if len(sys.argv) != 4:
