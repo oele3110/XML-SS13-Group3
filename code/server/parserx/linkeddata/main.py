@@ -73,8 +73,8 @@ def parse(inputFile, outputFile, resource):
 	f2.close()
 
 # returns rdf string which contains resource as subject only
-# input: (unspecified) rdf file, which contains reource as subject /object
-# and http-link to resource (full link with protocol)
+# input: http-link to resource (full link with protocol) and
+# (unspecified) rdf string, which contains reource as subject /object
 def parse2(resource, rdfData):
 	
 	pattern_any_description = '\s*<rdf:Description rdf:about=(.*)>'
@@ -135,7 +135,6 @@ def parse2(resource, rdfData):
 def run(url, input):
 	inputArray = re.split("\r\n", input)
 	return parse2(url, inputArray)
-
 
 def main():
 	if len(sys.argv) != 4:
