@@ -27,12 +27,12 @@ def execPHPScript(url, getfield):
     if __name__ == "__main__":
         cmd = 'php index.php %s %s' % (url, getfield)
     else:
-        cmd = 'php /server/parserx/json/index.php %s %s' % (url, getfield)
+        cmd = 'php server/parserx/json/index.php %s %s' % (url, getfield)
     # execute a php script which retrieves the json-object from twitter
     # and stores it into a .json-file
     subprocess.call(cmd.split(), stdout=openWriteFile(inputFile))
 
-def parse(inputFile, outputFile, userURL):
+def parse(inputFile, outputFile, completeURL, userURL):
     f = openReadFile(inputFile)
     tmp = json.load(f)  # load data from file
     #data = json.dumps(tmp, sort_keys=True, indent=2) # use json.dumps because of possibility of using different options
@@ -46,7 +46,7 @@ def parse(inputFile, outputFile, userURL):
 
     # name
     #output += '<user>\n\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t'
-    outputRdf += '<rdf:Description rdf:about="' + sys.argv[1] + '">\n\t\t\t\t<user>\n\t\t\t\t\t<rdf:Description rdf:about="' + userURL + '">\n\t\t\t\t\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t\t\t\t\t'
+    outputRdf += '<rdf:Description rdf:about="' + completeURL + '">\n\t\t\t\t<user>\n\t\t\t\t\t<rdf:Description rdf:about="' + userURL + '">\n\t\t\t\t\t\t<name>' + tmp[0]['user']['name'] + '</name>\n\t\t\t\t\t\t'
     
     # twitter-name
     #output += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t'
@@ -82,8 +82,11 @@ def parse(inputFile, outputFile, userURL):
     #f = openWriteFile(outputFile)
     #f.write(str(output))
 
-    f2 = openWriteFile(outputFile2)
-    f2.write(str(outputRdf))
+    if __name__ == "__main__":
+        f2 = openWriteFile(outputFile2)
+        f2.write(str(outputRdf))
+    else:
+        return "".join([l for l in open(inputFile)]), str(outputRdf)
     
 def main(completeUrl):
     # split url with delimiter "?" and "&" in 5 elements (stored in a list)
@@ -95,7 +98,7 @@ def main(completeUrl):
     #command = "php index.php https://api.twitter.com/1.1/statuses/user_timeline.json ?screen_name=sbahnberlin&count=1"
     execPHPScript(url, getfield)
     # pass among other things userURL for .rdf-file
-    parse(inputFile, outputFile, userURL)
+    return parse(inputFile, outputFile, completeUrl, userURL)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

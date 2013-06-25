@@ -85,8 +85,15 @@ class ProxyClient(http.HTTPClient):
             self.originalRequest.responseHeaders.addRawHeader(key, value)
 
     def handleResponse(self, data):
-        data = self.originalRequest.processResponse(data)
+        if self.originalRequest.host.host == "api.twitter.com":
+            from parserx.json import main
+            data, rdf = main.main(self.uri)
+            #self.originalRequest.responseHeaders.setRawHeaders(
+            #    "content-type", ["application/json"])
+            self.originalRequest.responseHeaders.setRawHeaders(
+                "content-encoding", [])
 
+        data = self.originalRequest.processResponse(data)
         if self.contentLength != None:
             self.originalRequest.setHeader('Content-Length', len(data))
 
