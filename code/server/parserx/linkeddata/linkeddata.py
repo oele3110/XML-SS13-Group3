@@ -101,7 +101,7 @@ def parse2(resource, rdfData):
 		
 		# add xml namespace needed for timestamps
 		if i==2:
-			outputRdf += 'xmlns:xsd="http://www.w3.org/2001/XMLSchema#'+"\n"
+			outputRdf += '\txmlns:xsd="http://www.w3.org/2001/XMLSchema#"'+"\n"
 		
 		# check if description tag
 		matchObj1 = re.match(pattern_any_description, lines[i])
