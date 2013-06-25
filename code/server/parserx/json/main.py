@@ -24,7 +24,10 @@ def initRDF():
 	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">\n\t'
 
 def execPHPScript(url, getfield):
-    cmd = 'php index.php %s %s' % (url, getfield)
+    if __name__ == "__main__":
+        cmd = 'php index.php %s %s' % (url, getfield)
+    else:
+        cmd = 'php /server/parserx/json/index.php %s %s' % (url, getfield)
     # execute a php script which retrieves the json-object from twitter
     # and stores it into a .json-file
     subprocess.call(cmd.split(), stdout=openWriteFile(inputFile))
