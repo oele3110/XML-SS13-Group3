@@ -1,5 +1,6 @@
 import re
 import sys
+import datetime
 
 # from logging_wrapper import *
 
@@ -12,10 +13,14 @@ def openWriteFile(file):
 	return f
 
 def initRdf():
-	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:md="http://www.w3.org/ns/md/">'
+	# return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:md="http://www.w3.org/ns/md/">'
+	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"\n\txmlns:schema="http://schema.org/Article#"\n\txmlns:xsd="http://www.w3.org/2001/XMLSchema#">'
 
 def initXml():
 	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'
+
+def getTimestamp():
+	return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S');
 
 def parse(inputFile, outputFile):
 	
@@ -31,10 +36,13 @@ def parse(inputFile, outputFile):
 	strMatch4 = ''
 	match6a = False
 	match7a = False
-	isMicrodata = False
 	
 	url = "http://stackoverflow.com"
 	
+	# add url
+	outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">'
+	# add timestamp
+	outputRdf += '\n\t\t<xsd:dateTime>' + getTimestamp() + '</xsd:dateTime>'
 	
 	for line in f:
 		pattern1 = '\s*<div (itemscope) (itemtype)="(.*)">'
@@ -64,18 +72,20 @@ def parse(inputFile, outputFile):
 		# itemscope itemtype
 		if matchObj1:
 			# output += '<md:itemscope itemtype="' + matchObj1.group(3) + '">\n'
-			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
-			isMicrodata = True
+			# outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			outputRdf += '\n\t\t<rdfs:isDefinedBy rdf:resource="http://schema.org/Article" />'
 		
 		# itemprop = image
 		if matchObj2:
 			# output += '\t<md:itemprop type="' + matchObj2.group(2) + '">\n\t\t<md:url>' + matchObj2.group(4) + '</md:url>\n\t</md:itemprop>\n'
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			outputRdf += '\n\t\t<schema:image>' + matchObj2.group(4) + '</schema:image>'
 		
 		# itemprop = name
 		if matchObj3:
 			# output += '\t<itemprop type="' + matchObj3.group(2) + '">\n\t\t<md:content>' + matchObj3.group(3) + '</content>\n\t</md:itemprop>\n'
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt; </schema:name>'
 		
 		# itemprop = description
 		if matchDescr:
@@ -106,18 +116,15 @@ def parse(inputFile, outputFile):
 			elif matchObj8:
 				matchDescr = False
 				# output += '</md:text>\n\t</md:itemprop>\n'
-				outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+				# outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+				outputRdf += '</schema:description>'
 		
 		if matchObj4:
 			matchDescr = True
 			# output += '\t<md:itemprop type="' + matchObj4.group(2) + '">\n\t\t<md:text>'
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
-
-	# output += '</md:itemscope>'
-	if isMicrodata:
-		outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>'
-	
-	outputRdf += '\n</rdf:RDF>'
+			outputRdf += '\n\t\t<schema:description>'
+		
+	outputRdf += '\n\t</rdf:Description>\n</rdf:RDF>'
 	
 	#f = openWriteFile(outputFile)
 	#f.write(output)
@@ -142,6 +149,10 @@ def parse2(url, input):
 	foundItemscope = False
 	isMicrodata = False
 	
+	# add url
+	outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">'
+	# add timestamp
+	outputRdf += '\n\t\t<xsd:dateTime>' + getTimestamp() + '</xsd:dateTime>'
 	
 	for line in input:
 		pattern1 = '\s*<div (itemscope) (itemtype)="(.*)">'
@@ -169,16 +180,18 @@ def parse2(url, input):
 		
 		# itemscope itemtype
 		if matchObj1:
-			outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
-			isMicrodata = True
+			# outputRdf += '\n\t<rdf:Description rdf:about="' + url + '">\n\t\t<md:itemscope>\n\t\t\t<rdf:Description rdf:about="' + matchObj1.group(3) + '">'
+			outputRdf += '\n\t\t<rdfs:isDefinedBy rdf:resource="http://schema.org/Article" />'
 		
 		# itemprop = image
 		if matchObj2:
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			outputRdf += '\n\t\t<schema:image>' + matchObj2.group(4) + '</schema:image>'
 		
 		# itemprop = name
 		if matchObj3:
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt; </schema:name>'
 		
 		# itemprop = description
 		if matchDescr:
@@ -202,16 +215,15 @@ def parse2(url, input):
 			# </div>
 			elif matchObj8:
 				matchDescr = False
-				outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+				# outputRdf += '</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
+				outputRdf += '</schema:description>'
 		
 		if matchObj4:
 			matchDescr = True
-			outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
-	
-	if isMicrodata:
-		outputRdf += '\n\t\t\t</rdf:Description>\n\t\t</md:itemscope>\n\t</rdf:Description>'
+			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj4.group(2) + '">\n\t\t\t\t\t\t<md:text>'
+			outputRdf += '\n\t\t<schema:description>'
 		
-	outputRdf += '\n</rdf:RDF>'
+	outputRdf += '\n\t</rdf:Description>\n</rdf:RDF>'
 	
 	return outputRdf
 
