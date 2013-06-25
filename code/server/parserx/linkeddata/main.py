@@ -1,5 +1,7 @@
 import re
 import sys
+import urllib2
+import datetime
 
 # from logging_wrapper import *
 
@@ -10,6 +12,9 @@ def openReadFile(file):
 def openWriteFile(file):
 	f = open(file,'w')
 	return f
+
+def getTimestamp():
+	return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S');
 
 # creates rdf file which contains resource as subject only
 # input: (unspecified) rdf file, which contains reource as subject /object
@@ -37,7 +42,7 @@ def parse(inputFile, outputFile, resource):
 			break
 		
 		# get next line
-		outputRdf += (lines[i])
+		outputRdf += (lines[i]+"\n")
 		# print "[i="+str(i)+"]\n" + lines[i]
 		i += 1
 		
@@ -47,24 +52,28 @@ def parse(inputFile, outputFile, resource):
 		# check if valid (rsrc as subj) description tag
 		matchObj1 = re.match(pattern_rsrc_as_subj, lines[i])
 		if matchObj1:
+			
 			# copy valid description
 			isDescription = True
 			while isDescription:
-				outputRdf += (lines[i])
+				outputRdf += (lines[i]+"\n")
 				# print "[i="+str(i)+"]\n" + lines[i]
 				i += 1
 				
 				# check if description tag gets closed
 				matchObj1 = re.match(pattern_close_description, lines[i])
 				if matchObj1:
-					outputRdf += (lines[i])
+					
+					# add timestamp and close description
+					outputRdf += '\n\t\t<xsd:dateTime>' + getTimestamp() + '</xsd:dateTime>'
+					outputRdf += (lines[i]+"\n")
 					# print "[i="+str(i)+"]\n" + lines[i]
 					# print "\n ------ isFalse ------ \n"
 					isDescription = False
 		i += 1	
 
 	# final_phase: get closing tags after last rdf-description tags
-	outputRdf += (lines[eof_index-1])
+	outputRdf += (lines[eof_index-1]+"\n")
 	# print "[i="+str(eof_index-1)+"]\n" + lines[eof_index-1]
 
 	# create file
@@ -97,7 +106,7 @@ def parse2(resource, rdfData):
 			break
 		
 		# get next line
-		outputRdf += (lines[i])
+		outputRdf += (lines[i]+"\n")
 		# print "[i="+str(i)+"]\n" + lines[i]
 		i += 1
 		
@@ -110,35 +119,46 @@ def parse2(resource, rdfData):
 			# copy valid description
 			isDescription = True
 			while isDescription:
-				outputRdf += (lines[i])
+				outputRdf += (lines[i]+"\n")
 				# print "[i="+str(i)+"]\n" + lines[i]
 				i += 1
 				
 				# check if description tag gets closed
 				matchObj1 = re.match(pattern_close_description, lines[i])
 				if matchObj1:
-					outputRdf += (lines[i])
+					# add timestamp and close description
+					outputRdf += '    <xsd:dateTime>' + getTimestamp() + '</xsd:dateTime>' + "\n"
+					outputRdf += (lines[i]+"\n")
 					# print "[i="+str(i)+"]\n" + lines[i]
 					# print "\n ------ isFalse ------ \n"
 					isDescription = False
 		i += 1	
 
 	# final_phase: get closing tags after last rdf-description tags
-	outputRdf += (lines[eof_index-1])
+	outputRdf += (lines[eof_index-1]+"\n")
 	# print "[i="+str(eof_index-1)+"]\n" + lines[eof_index-1]
 
 	# return manipulated rdf
 	return outputRdf
 
-# string URL: dbpedia ressource URI http://dbpedia.org/resource/Klaus_Wowereit 
-# string input: string containing all rdf-information
-def run(url, input):
-	inputArray = re.split("\r\n", input)
-	return parse2(url, inputArray)
+# string URL: dbpedia resource URI http://dbpedia.org/resource/Klaus_Wowereit 
+def run(url):
+	
+	try:
+		url.index ("http://dbpedia.org/resource/")
+	except ValueError:
+		print "Oops! That was no valid /resource/ dbpedia link..."
+
+	rdf_url = url.replace("/resource/", "/data/", 1)
+	response = urllib2.urlopen(rdf_url)
+	html = response.read()
+	lines = html.splitlines()
+
+	return parse2(url, lines)
 
 def main():
 	if len(sys.argv) != 4:
-		print 'run as:\n\tpython main.py inputFile outputFile resource'
+		print 'run as:\n\tpython inputFile outputFile resource'
 	else:
 		inputFile = sys.argv[1]
 		outputFile = sys.argv[2]
@@ -148,4 +168,6 @@ def main():
 		print 'output file: ' + resource
 		print 'creating subject-based RDF file'
 		parse(inputFile, outputFile, resource)
-main()
+#main()
+print run("http://dbpedia.org/resource/Klaus_Wowereit")
+
