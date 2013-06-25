@@ -17,6 +17,7 @@ def filter(request, data):
                 rdf_ = main.run(request.uri, data)
                 rdf.importDatasets(rdf_)
                 info("Parser result: %s" % x)
+            #TODO add linkeddata call and import to 4store
             else:
                 info("Unknown content type, skip filtering")
         else:
