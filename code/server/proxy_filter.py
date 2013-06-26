@@ -18,10 +18,9 @@ def filter(request, data):
                 rdf.importDatasets(rdf_)
                 info("Parser result: %s" % x)
 	    elif request.host.host == "dbpedia.org":
-	        info("Filter dbpedia URI"+request.uri)
-		#rdf_ = linkeddata.run(request.uri)
-		#rdf.importDatasets(rdf_)
-		#info("Parser result: %s" % x)
+		info("DBPEDIA URI: "+request.uri)
+		rdf_ = linkeddata.run(request.uri)
+		rdf.importDatasets(rdf_)
 	    else:
                 info("Unknown content type, skip filtering")
         else:

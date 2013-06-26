@@ -155,7 +155,7 @@ def run(url):
 		lines = html.splitlines()
 		return parse2(url, lines)
 	else:
-		response = urllib2.urlopen(rdf_url)
+		response = urllib2.urlopen(url)
 		return response.read()
 
 def main():
