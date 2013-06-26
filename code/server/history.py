@@ -7,8 +7,9 @@ def buildHeader():
 def buildFooter():
 	return "\n</body>\n</html>"
 
-def getHistory(query):
+def getHistory():
 	
+	query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT * WHERE {?s xsd:dateTime ?o}"
 	pattern1 = '\s*<binding name="s"><uri>(.*)</uri></binding>\s*'
 	pattern2 = '\s*<binding name="o"><literal>(.*)</literal></binding>\s*'
 	
@@ -43,16 +44,16 @@ def getHistory(query):
 			timestamp = None
 	
 	for key in sorted(dictionary.iterkeys(), reverse = True):
-		print key + "\t" + dictionary[key]
+		#print key + "\t" + dictionary[key]
 		html += "<p>" + key + " : <a href=\"" + dictionary[key] + "\">" + dictionary[key] + "</a></p>\n"
 	
 	html += buildFooter()
 	
-	f = open("history.html", "w")
-        f.write(html)
-        f.flush()
-        f.close()
+	#f = open("history.html", "w")
+        #f.write(html)
+        #f.flush()
+        #f.close()
 	
 	return html
 
-getHistory("PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT * WHERE {?s xsd:dateTime ?o}")
+#getHistory()

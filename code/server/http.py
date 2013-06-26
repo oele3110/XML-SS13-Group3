@@ -3,6 +3,7 @@ __all__ = ["get_http_server"]
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from urlparse import urlparse as parse_path
 from urllib2 import urlparse
+from history import getHistory
 
 from logging_wrapper import *
 
@@ -22,6 +23,12 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
     def create_body(self):
         #debug(self.url)
         #debug(self.url_params)
+	html = getHistory()
+	
+	f = open("history.html", "w")
+        f.write(html)
+        f.flush()
+        f.close()
 
         self.wfile.write((self.url, self.url_params))
         pass
