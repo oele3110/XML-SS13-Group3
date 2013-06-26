@@ -99,6 +99,10 @@ def parse2(resource, rdfData):
 	# init_phase: get every line before first rdf-description tag
 	while i<(eof_index):
 		
+		# add xml namespap needed for timestamps
+		if i==1:
+			outputRdf += 'xmlns:xsd="http://www.w3.org/2001/XMLSchema#"'
+		
 		# check if description tag
 		matchObj1 = re.match(pattern_any_description, lines[i])
 		if matchObj1:
