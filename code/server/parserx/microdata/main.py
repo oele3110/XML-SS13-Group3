@@ -232,7 +232,7 @@ def run(url, input):
 	rdf = parse2(url, inputArray)
 	return rdf
 	
-
+"""
 def main():
 	if len(sys.argv) != 3:
 		print 'run as:\n\tpython main.py inputFile outputFile'
@@ -245,3 +245,4 @@ def main():
 		parse(inputFile, outputFile)
 
 main()
+"""
