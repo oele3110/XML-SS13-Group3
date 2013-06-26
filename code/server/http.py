@@ -24,13 +24,9 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
         #debug(self.url)
         #debug(self.url_params)
 	html = getHistory()
+	self.wfile.write(html)
 	
-	f = open("history.html", "w")
-        f.write(html)
-        f.flush()
-        f.close()
-
-        self.wfile.write((self.url, self.url_params))
+        #self.wfile.write((self.url, self.url_params))	
         pass
 
     def respond(self):
