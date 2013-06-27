@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://entscholar.net/lib/pkp/xml/oai2.xsl" ?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+		http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+	<responseDate>2013-06-27T17:40:42Z</responseDate>
+	<request verb="ListRecords" metadataPrefix="oai_dc">http://entscholar.net/index.php/index/oai</request>
+	<ListRecords>
+		<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/2</identifier>
+				<datestamp>2012-10-19T10:16:09Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/12</identifier>
+				<datestamp>2012-10-31T13:49:31Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/10</identifier>
+				<datestamp>2012-10-24T01:18:06Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Vertical Partial laryngectomy an atlas</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Vertical partial Laryngectomy is a conservative laryngeal surgical procedure whichinvolves removal of one half of the larynx while the other half is preserved. Thedead space created after removal of one half of the larynx is closed using variousflaps. This surgery was first proposed by Solis – Colen in 1869 to manage earlymalignant lesions involving vocal folds.Indications:1. Malignant tumors involving a single vocal cord early T1, T2 and select T3lesions2. Anterior commissure of the vocal cord should be free of the lesionThis surgery is not suitable for patients with growth vocal cord involving theanterior commissure and the opposite cord.This e book discusses the entire procedure of vertical partial laryngectomy usingphotographs. Download the full  book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-23</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/7</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/24</identifier>
+				<datestamp>2012-11-08T12:17:07Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Anatomy of Paranasal sinuses</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Paranasal sinuses are air filled hollow sacs seen around the skull bone. These sacs precisely surround the nasal cavity. There are four paired sinuses surrounding the nasal cavity. This article attempts to trace the history of anatomy of paranasal sinuses from early 16th century till date. The advent of nasal endoscopes have added another dimension to the anatomical study of paranasal sinuses. The entire subject of anatomy of paranasal sinuses has been rewritten after endoscopes were started to be used commonly.Introduction:Precise understanding of anatomy of paranasal sinuses is an important prerequisite in avoiding complications during endoscopic sinus surgery. Common complications following endoscopic sinus surgery are caused by inadequate understanding of the highly complex and variable anatomy of paranasal sinuses.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-08</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/20</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/4</identifier>
+				<datestamp>2012-10-19T13:44:00Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Epistaxis a review</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> Epistaxis is defined as bleeding from the nasal cavity. It is actually a Greek word for nose bleed. Itis actually a very common problem and hence its incidence is rather difficult to access. Crudeestimates or its incidence ranges from 5 – 14% 1. The incidence of epistaxis also shows significantincrease during winter months / hot dry climates with low humidity. This climatic increase inincidence of epistaxis has been attributed to increase in the incidence of upper respiratory tractinfections. Forceful blowing of inflammated nasal mucosa provokes epistaxis in these patients 2.Classically epistaxis is known to manifest bimodal incidence – with peaks in age groups of 2-10 and60-80. Only a small percentage of this population seek Otolaryngologist intervention. Thisamounts to about 1% of all patients with nasal bleed 3.You can download the complete book from here.  About the author:  Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-19</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/3</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/18</identifier>
+				<datestamp>2012-11-01T15:41:29Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Blow out fracture current management trends</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Blow out fracture of orbit is defined as fracture of one or more of its internal walls.This injury is typically caused by blunt trauma to orbit. In pure terms thisdefinition does not involve the orbital rim. If fracture of orbital rim is associatedwith fractures of one or more of its internal walls then the term complex blow outfracture is used. Even though there is nothing complex about it, this term is used tostress the importance of non involvement of orbital rim in blow out fracture. Blowout fracture is actually a protective mechanism which ensures that sudden build upof intraocular pressure which could be detrimental to vision does not occurfollowing frontal injury to orbit.History: Blow out fracture of orbit was first described by Lang in early 1900's. Theexact description of the fracture and the terminology (blow out fracture) was firstcoined by Converse and Smith. It was infact Smith who first described inferiorrectus entrapment in between the fractured fragments, causing decreased ocularmobility.This e book discusses this topic along with a note on the current management trends.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-01</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/14</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/11</identifier>
+				<datestamp>2012-10-29T03:08:37Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Radiological anatomy of Frontal Sinus</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US">  Introduction: Frontal sinus is a complex and highly variable structure. Theseanatomic variations have a tremendous impact on the direction of drainage,efficiency of mucociliary clearance mechanism and frontal recess morphology. CTscans of frontal sinus have conventionally being performed with continuous 3mmcoronal and axial slices. High resolution multiplanar scanners have made sagittalreformatted images a possibility. These scanners enable imaging in three planes.Routine imaging of this area will provide vital clues regarding not only the varied anatomy but also the probable pathophysiological factors that could cause obstruction. Download the complete book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-28</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/8</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:rights xml:lang="en-US">Sales rights unknown or unstated for any reason</dc:rights>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/25</identifier>
+				<datestamp>2012-11-10T04:26:24Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Orbital Disorders</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otolaryngology, Rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> Introduction:The effects caused by orbital diseases are governed by:1. Pathophysiology of the disease process2. Anatomic pattern of involvement (location of the lesion). This is more evident fromthe fact that small tumors of orbital apex causes early symptoms due to involvementof 2,3,4,5 and 6th cranial nerves. These patients will also manifest with progressivevision loss during early course of the lesion. Laterally placed orbital Meningiomascause features of superior orbital syndrome which could manifest before or alongwith loss of visual acuity.Anatomy of orbit:A careful study of anatomy of orbit is very important to an ENT surgeon because of itsproximity to the para nasal sinuses. A comprehensive knowledge of orbital and peri orbitalanatomy is necessary to understand the various disorders of this region and in its surgicalmanagement.The shape of the orbit resembles a four sided pyramid to begin with but as one goesposterior it becomes three sided towards the apex. The volume of the orbital cavity in anadult is roughly about 30cc. The rim of orbit in an adult measures about 40mm horizontallyand 35 mm vertically. The medial walls of orbit are roughly parallel and are about 25 mmapart in an adult. The lateral walls of orbit angles about 90 degrees from each other.This e book discusses orbital disorders from otolaryngologist's perspective.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-09</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/21</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/5</identifier>
+				<datestamp>2012-10-20T05:40:42Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Examination of lacrimal apparatus</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">lacrimal apparatus, rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> Dacryocystorhinostomy as a treatment modality for epiphora is commonly being performedendonasally using a nasal endoscope by otolaryngologists. It is hence imperative that theydiligently examine the entire lacrimal system before proceeding with the procedure. Despite thecommonality of this surgical procedure, standard otolaryngology text books contain fewer literatureon this subject. History of surgery for nasolacrimal pathway obstruction dates back to Hamurabi2200 B.C 1. Dacryocystorhinostomy is the undisputed treatment of choice for lacrimal systemdrainage obstruction below the level of common canaliculi. Endonasal approach ofdacryocystorhinostomy was first described by Caldwell in 1893 2.Epiphora can be caused by blockage of lacrimal drainage system / excess lacrimation / loss oflacrimal pump mechanism. Lacrimal pump mechanism could be disrupted due to lower lid laxity orweakness of orbicularis oculi muscle. Normal lacrimation / or excess of it can be caused byirritation to cornea / conjunctiva 3. This reflex is initiated by stimulation of trigeminal nerve. This e book discusses various clinical methods and investigations to examine lacrimal appratus. Download the full E book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-20</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/4</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/19</identifier>
+				<datestamp>2012-11-02T11:08:22Z</datestamp>
+				<setSpec>otolaryngology:mgr</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Tamilnadu Dr MGR University MBBS Prefinal ENT August 2006 question paper with solution</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US">  This e book contains Tamilnadu Dr MGR Medical Univeristy MBBS Prefinal ENT August 2006 question paper with solution</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-02</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/15</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">international</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/14</identifier>
+				<datestamp>2012-10-31T14:33:12Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Vidian Neurectomy</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Vidius in 1509 identified the vidian nerve in the floor of the sphenoid sinus whileperforming dissection in that area. This nerve is thought to play a role in thepathophysiology of rhinitis, epiphora, crocodile tears, Sluder syndrome, crainal /cluster headaches.In 1943 Fowler reported a rather unusual unilateral vasomotor rhinitis followingipsilateral stellate ganglion destruction. He also went to the extent of suggesting thatexperimental surgeries involving the stellate ganglion could throw light on thefundamental mechanism of vasomotor rhinitis. This was promptly taken up by PhilipHenry Golding – Wood who suggested that chronic vasomotor rhinitis should beconsidered as simple secretomotor hyperactivity of the nasal cavity mucosa. Heconcluded that emotional stress played a role in the initiation and perpetuation ofvasomotor rhinitis.Wolff in 1950 classified emotional effects on target organs as:Stomach reactors – Who manifested with gastrointestinal disturbances followingemotional stressPulse reactors – These patients showed changes in pulse rate in response to emotionalstressNose reactors – These patients manifested with nasal congestion and dischargefollowing emotional stress.Wolff also managed to record changes in the nasal mucosa when he interviewedpsychiatric patients with chronic rhintis. Turbinate biopsies from these patientsrevealed hyperplasia of mucosal glands which was filled with secretions. Lymphchannels were found to be dilated with predominant eosinophilia.Sectioning of greater superficial petrosal nerve as a treatement for vasomotor rhinitiswas first proposed by Zeilgelmann in 1934. This suggestion was followed by MurrayFalconer in 1954. Download the entire book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-31</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/10</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/26</identifier>
+				<datestamp>2012-11-25T12:37:31Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Otosclerosis</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">otology</dc:subject>
+	<dc:description xml:lang="en-US">  Otosclerosis is a hereditary localized disease of the bone derived fromthe otic capsule characterized by alternating phases of bone resorption and newbone formation. The mature lamellar bone is removed by osteoclasis and replacedby woven bone of greater thickness, cellularity and vascularity.History: In 1741 Antonio Valsalva described ankylosis of stapes while doing apostmortem on the body of a deaf patient.In 1894, Adam Politzer introduced the term &quot;otosclerosis&quot; and described thehistopathology of the disease for the first time.In 1912 Siebenmann introduced the term otospongiosis to denote active otoscleroticfoci.  This e book discusses the entire topic.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-25</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/22</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/6</identifier>
+				<datestamp>2012-10-20T16:35:12Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">OSCE Notes in otolaryngology</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US">  All over the world the examination pattern for medical students is undergoing a seachange. The basic idea is to make the evaluation process more comprehensive andobjective. OSCE pattern of clinical examination is being implemented almost allover the world. To my surprise there are very few resources available for the studentsto help them to face this examination with confidence. Eventhough excellenttextbooks and reading materials are available for various medical disciplines OSCEbased exercises that are available to the students to practice are far too few.In order to help the students I am publishing this e book titled “OSCE Notes inOtolaryngology”. This book can be freely downloaded and used by the students ofotolaryngology. You can download the complete book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-20</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/5</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/20</identifier>
+				<datestamp>2012-11-03T11:50:53Z</datestamp>
+				<setSpec>otolaryngology:mgr</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">The Tamilnadu Dr MGR MedicalUniversity Prefinal MBBSOtolaryngology February 2011 questionpaper with solutions</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otolaryngology</dc:subject>
+	<dc:description xml:lang="en-US"> This e book contains MBBS ENT ptefinal question paper Feb 2011 of Tamilnadu MGR Univeristy wiht solutions</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-03</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/16</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/13</identifier>
+				<datestamp>2012-10-31T11:34:55Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Revision topics in otology</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> This book has been written with exam going students in mind. An average student finds itreally difficult to revise all topics prior to examination. There is also the added disadvantageof time management. They have to juggle with preparations for different subjects. Thisbook has been structured in such a way that frequently asked questions in the examinationhave been dealt with in an objective manner. Exam going student just by reading this bookwill be able to rapidly revise the important topics.This e book is definitely not a replacement for standard text books in the subject. This bookis not meant to supplement the standard literature in the speciality and help the studentsduring their exam preparations. Download the complete book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-31</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/9</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:rights xml:lang="en-US">For sale with exclusive rights in the specified countries or territories (sales restriction applies)</dc:rights>
+	<dc:rights xml:lang="en-US">Sales rights unknown or unstated for any reason</dc:rights>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/27</identifier>
+				<datestamp>2012-12-21T04:08:18Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Proptosis Otolaryngologist's perspective</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otolaryngology</dc:subject>
+	<dc:description xml:lang="en-US">Proximity of orbit to nose and paranasal sinuses makes it rather vulnerable to insults due tootolaryngological causes. The medial wall of orbit (Lamina papyracea) is rather paper thin and ithappens to form the lateral wall of anterior ethmoid air cells. Infections / tumors involvingparanasal sinuses can involve orbit also causing proptosis. This article aims at studying the variouscauses of proptosis with special emphasis on the various management modalities available.Proptosis is defined as abnormal protrusion of eyeball. It has in fact been used interchangeablywith exophthalmos. Purists consider exophthalmos as proptosis with lid lag (since it is commonlyassociated with Grave's disease). According to Epstein in Proptosis the globe protrudes out by 18mm or less and exophthalmos is globe protrusion of more than 18 mm. Henderson prefersreserving the term exophthalmos to proptosis caused by endocrine causes. Proptosis should bedifferentiated from exorbitism which is caused by decrease in the volume of orbit causing theorbital contents to protrude anteriorly. In exorbitism proptosis is always anterior.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-12-20</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/23</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/7</identifier>
+				<datestamp>2012-10-21T13:05:20Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Larynx case records</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> This e book contains interesting case records from the field of laryngology.  These cases are from the personal archives of the author. Complete e book can be downloaded from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-21</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/6</dc:identifier>
+	<dc:identifier>ISBN-13</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/21</identifier>
+				<datestamp>2012-11-03T12:37:53Z</datestamp>
+				<setSpec>otolaryngology:mgr</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">The Tamilnadu Dr MGR Medical UniversityMBBS Prefinal Otolaryngology march 2007question paper with solution</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">otolaryngology</dc:subject>
+	<dc:description xml:lang="en-US">The Tamilnadu Dr MGR Medical UniversityMBBS Prefinal Otolaryngology march 2007question paper with solution</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-03</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/17</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">international</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/15</identifier>
+				<datestamp>2012-10-31T16:08:24Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Meniere's Disease Second edition incorporating the recent advances</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otology</dc:subject>
+	<dc:description xml:lang="en-US"> In late 19th century Prosper Meniere described a condition characterized by earblock, tinnitus, and vertigo. He even correctly identified the site of lesion to belabyrinth. It wont be a understatement to say that precious little has been added tothe knowledge and understanding of the disorder since then. Prosper Meniere infactlived far ahead of his time. He was born in 1799 in France. In 1848 he began totranslate the text book on hearing loss authored by Kramer. The book was writtenin German. This kindled his interest in otology.In his classical seminal reports he goes on to describe a series of patients whopresented with neural deafness, with hearing loss greater for low frequencies.Deafness was commonly unilateral in these patients. These patients usually presentwith tinnitus, vertigo, nausea and vomiting. He reported that these patients had anormal ear drum. He also reported that these symptoms were completely reversible.This e book discusses the entire topic.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-31</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/11</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/28</identifier>
+				<datestamp>2012-12-29T00:58:41Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Outcome of vidian neurectomy in chronic intractable rhinitis</dc:title>
+	<dc:creator>Balachander, Leena; Stanley Medical College</dc:creator>
+	<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+	<dc:description xml:lang="en-US">Rhinitis is the most common symptom with which patientapproach physicians. It is distressing for both the patient and thephysician , for the former due to its nagging nature and to the laterdue to inability to cure and problems of self-medications and thecomplications associated with self-medication in many cases.Rhinitis is a very common disorder known to all of us.Most of the people suffer from rhinitis atleast once in a year. Itgenerally proves to be a self limiting disease without any treatment.This in contrast to chronic rhinitis affecting upto 20% of people.AIM OF STUDY1. To evaluate the outcome of vidian neurectomy in patients who haveIntractable chronic rhinitis.2. To find out the response to individual symptom for this procedure3. To study about the vidian canal type in our study population.4. To find out the type of approach to each type of vidian canal5. To find out probable complications arising after this procedure.This is the dissertation submitted to The Tamilnadu Dr MGR Medical University.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-12-28</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/24</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/8</identifier>
+				<datestamp>2012-10-19T09:59:58Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Lingual thyroid &amp; its management II Edition</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Laryngology</dc:subject>
+	<dc:description xml:lang="en-US">Lingual thyroid is a fairly rare ectopic thyroid presentation. Incidence rangessomewhere in the range of 1 in 100,000 normal populations. Commonly lingualthyroid happens to be the only functioning thyroid. Normal thyroid may be absent inthe neck of these patients. Common dilemma in managing these patients is whetherto operate lingual thyroid or not. Treatment modality invariably depends on the sizeof the mass. These patients commonly suffer from hypothyroidism as these ectopictissues are not capable of maintaining normal thyroxin levels in these patients.This book discusses etiopathogenesis of lingual thyroid with special emphasis on thevarious management modalities available. About the author:Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology. Download the full ebook from here. </dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-19</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/1</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/22</identifier>
+				<datestamp>2012-11-03T13:22:14Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Rhinitis</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> In broad terms rhinitis is defined as inflammation involving mucosal lining of thenasal cavity 1. This disorder is rather common in primary care and speciality clinics.This common condition affects nearly 20 - 25% of general population 2 . This figurecould increase to 40% of patients attending ENT clinics. Inflammation of nasalmucosa can be caused by various factors which include:1. Infections2. Allergy3. Irritants4. Medications5. HormonesIt is hence imperative to classify various types of rhinitis according to their causativefactors in order to optimise the treatment modality.If the following symptoms of rhinitis persist for a duration of more than 3 weeks thenit is known as chronic rhinitis. Symptoms of chronic rhinitis include:1. Excessive discharge from nasal cavity2. Nasal congestion3. Pain4. Pressure symptoms due to secretions daming inside sinuses5. Sneezing6. Itchy noseThis e book discusses the entire topic</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-03</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US"></dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/18</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/1</identifier>
+				<datestamp>2012-10-19T09:59:58Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Lingual thyroid &amp; its management II Edition</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Laryngology</dc:subject>
+	<dc:description xml:lang="en-US">Lingual thyroid is a fairly rare ectopic thyroid presentation. Incidence rangessomewhere in the range of 1 in 100,000 normal populations. Commonly lingualthyroid happens to be the only functioning thyroid. Normal thyroid may be absent inthe neck of these patients. Common dilemma in managing these patients is whetherto operate lingual thyroid or not. Treatment modality invariably depends on the sizeof the mass. These patients commonly suffer from hypothyroidism as these ectopictissues are not capable of maintaining normal thyroxin levels in these patients.This book discusses etiopathogenesis of lingual thyroid with special emphasis on thevarious management modalities available. About the author:Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology. Download the full ebook from here. </dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-19</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/1</dc:identifier>
+	<dc:identifier>ISBN-13</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:rights xml:lang="en-US">Sales rights unknown or unstated for any reason</dc:rights>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/16</identifier>
+				<datestamp>2012-11-01T01:28:53Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">CP angle tumors An otolaryngologist's perspective</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otology</dc:subject>
+	<dc:description xml:lang="en-US">  Cerebellopontine angle tumors are encountered rather more commonly than anticipated byotolaryngologist. This group of tumors account for nearly 10% of all intracranial tumors. Thesetumors are rather fatal when not treated. Studies reveal that acoustic neuromas (vestibularschwannomas) constitute nearly 80% of all cerebellopontine angle tumors. Other tumors that couldinvolve this area include:1. Meningiomas2. Dermoid tumors3. Arachnoid cysts4. Lipoma5. Metastatic tumors6. Vascular tumorsThe entire science of neuro-otology developed because of tumors involving this area.History:Sir Charles Balance first documented successful removal of C-P angle tumor in London (1894). Healso documented the presence of facial paralysis and facial anesthesia following surgery in the samepatient.This E book has been authored from the view point of an otolaryngologist.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-31</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/12</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/29</identifier>
+				<datestamp>2013-01-06T14:04:54Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Voice rehabilitation following total laryngectomy</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Laryngology</dc:subject>
+	<dc:description xml:lang="en-US">Despite continuing advances in surgical management of laryngeal malignancy, total laryngectomy is still the treatment of choice in advanced laryngeal malignancies. Considering the longevity of the patient following total laryngectomy, various measures have been adopted in order to provide voice function to the patient. Significant advancements have taken place in voice rehabilitation of post laryngectomy patients. Advancements in oncological surgical techniques and irradiation techniques have literally cured laryngeal malignancies. Among the various voice rehabilitation techniques available TEP (Tracheo oesophageal puncture) is considered to be the gold standard. This article attempts to explore the various voice rehabilitation technique available with primary focus on TEP.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2013-01-06</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/25</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/9</identifier>
+				<datestamp>2012-10-24T01:18:06Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Vertical Partial laryngectomy an atlas</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Vertical partial Laryngectomy is a conservative laryngeal surgical procedure whichinvolves removal of one half of the larynx while the other half is preserved. Thedead space created after removal of one half of the larynx is closed using variousflaps. This surgery was first proposed by Solis – Colen in 1869 to manage earlymalignant lesions involving vocal folds.Indications:1. Malignant tumors involving a single vocal cord early T1, T2 and select T3lesions2. Anterior commissure of the vocal cord should be free of the lesionThis surgery is not suitable for patients with growth vocal cord involving theanterior commissure and the opposite cord.This e book discusses the entire procedure of vertical partial laryngectomy usingphotographs. Download the full  book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-23</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/7</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:rights xml:lang="en-US">Sales rights unknown or unstated for any reason</dc:rights>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/23</identifier>
+				<datestamp>2012-11-06T04:58:25Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Thyroid nodule and its management</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Laryngology</dc:subject>
+	<dc:description xml:lang="en-US"> Introduction:Thyroid nodule is a common occurrence. Majority of these nodules may be presentwithout clinical evidence of thyroid disease. Statistics reveal that the incidence ofpalpable thyroid nodule is about 5%. Ultrasound neck is very sensitive in picking upthyroid nodules. Ultrasound can diagnose thyroid nodules even as small as 1⁄2 cm.Studies have shown that only 3-5% of thyroid nodules show malignanttransformation.Causes of thyroid nodules include:Benign causes:1. Goiter2. Hashimoto's thyroiditis3. Simple / hemorrhagic cysts4. Follicular adenoma5. Subacute thyroiditisMalignant causes:1. Papillary carcinoma2. Follicular carcinoma3. Hurthle cell carcinoma4. Medullary carcinoma5. Anaplastic carcinoma6. Primary thyroid lymphoma7. Metastatic malignant lesion This e book discusses in detail the management options available in managing these patients</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-05</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/19</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/3</identifier>
+				<datestamp>2012-10-19T10:44:37Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Total Maxillectomy a review</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> The concept of maxillectomy was first described by Lazars in 1826. After this description it tooknearly three years for Syme to perform the first maxillectomy (1829). Earlier attempts at thissurgery failed because of excessive bleeding. Bleeding and infection were two scrooges whichcaused unacceptable morbidity and mortality in patients following maxillectomy. In 1927Portmann &amp;amp; Retrouvey suggested sublabial transoral approach to remove maxilla. Thisapproach obviated the use of disfiguring facial incisions. Rapid advances which took place inthe field of anesthesia and surgical techniques in 1950 rekindled the interest in totalmaxillectomy as a viable treatment option for malignant lesions involving maxilla. It was duringthis period that Weber Ferguson came out with his epoch making lateral rhinotomy incisionwhich caused very little cosmetic deformity. Later various modifications of these incisions wereused to perform maxillectomy.In 1954 Smith did what was considered impossible. He combined total maxillectomy withorbital exenteration. It was only after Smith’s demonstration of extended total maxillectomycurative surgery for maxillary carcinomas began to take center stage. Fairbanks &amp;amp; Barbosa(1961) described infratemporal fossa approach to resect advanced malignancies of maxilla.These tumors were considered to be inoperable till then.In 1977 Sessions &amp;amp; Larson first envisaged medial maxillectomy and were also responsible forcoining the term. With the advent of nasal endoscope resection of tumors involving lateralnasal wall under endoscopic vision is the order of the day. This book reviews the entire topic. About the author:Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology.You can get the complete book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-19</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/2</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/17</identifier>
+				<datestamp>2012-11-01T10:59:10Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Endoscopic Otology</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:creator>Ulaganathan, Venkatesan</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US">  All traditional Otologist, who have put in more than ten years of operating skill, will agree that lotto be changed in the technique of ontological surgeries in order to improve the results, reduce thesurgical hours and also to eliminate post- surgical sequel / complications.This may be entirely on account of either poor visualization or can be due to less spacetomanipulate or due to crowding of structures, though anatomical orientation and pathological naturehas been understood adequately. Hence, many areas have been described as inaccessible or hidden,where residual disease has not been removed. Therefore more cases of residual and recurrence ofdisease have been the order of the day.Thanks to Mr. Mer and is colleagues who have conducted endoscopic visualization of middle eareven though it is a feline study (1). Many workers have been trying to arrive at a solution andNomura (2) has described endoscopic Myringotomy. Later many workers have tried endoscopy inthe middle ear surgery including the Eustachian tube access, which has not been popularized.Of late endoscopes have been used through pre-existing perforations of the tympanic membrane.Still many support use of microscopes in the middle ear surgical approach. They all accept thatadequate clearance is not possible through micro-ear surgery.They argue that endoscopic ear surgery is having inherent lacunae of depth perception as well asthree dimensional feel is not possible. There is a separate group for IWGEES known asInternational Working Group on Endoscopic Ear Surgery which enlightens us on the principles,advantages and the advancement of use of endoscopes in ear surgery (4)The trend from separate oto-endoscope for ear surgery has been changed to routine endoscope with4 mm diameter scopes, which previously thought of as too big of external auditory canal. In factthis has revolutionsed the ear surgery principles and further has reduced the operative deficienciessuch as residual disease, complications and recurrence rate.Endoscope, in fact, has wider coverage and also gives clear image both for surgery and also forrecording purpose. Operating time has been reduced considerably and also unnecessary exposure ormanipulation of surrounding vital structures has been eliminated.Endoscopic approach reduced the external incision as well as mastoid approach in manycircumstances. It is also used as adjuvant in skull base approaches. Per meatal approach is quietadequate in routine surgeries with the use of endoscope. Therefore diseased is traced from its originand entire extent is delineated adequately to avoid residual lesion. It also gives adequate clearvisualization of structures including stapedial tendon, tensor tympani and process cochleariformis.Pathological conditions such as dehiscence in Fallopian canal, Fistula in semicircular canals,cholesteatoma in the sinus tympani region are clearly visualized using endoscopes. Stapedectomysurgery are carried out with ease. Portability to many places is a boon for surgeons operating atdifferent places. It also gives easy access for doing bilateral surgeries without much manipulationsunlike microscopic surgeries. Wide angle in endoscopes gives superior results than while doing withOtoendoscope. Here detailed description of various uses of endoscopes in various conditionshave been describe which are self explanatory and will be use great use to future Otologists.Further, tremendous changes are going to take place in the near future, including flexible scopes,flexible /bending instruments or instruments specific for hemorrhagic lesions and malignant lesions.Hence most of the disease conditions are going to be tackled with quiet ease and confidence withleast morbidity. This e book describes otological surgeries that can be performed under endoscopic vision.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-11-01</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/13</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/30</identifier>
+				<datestamp>2013-03-20T08:38:36Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Faciomaxillary trauma an update</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Otolaryngology</dc:subject>
+	<dc:description xml:lang="en-US">This supplement of otolaryngology online journal covers the topic of Faciomaxillary trauma. Topics covered include fractures involving nasal bones, zygoma, maxilla and frontal bones. The entire discussion is from the perspective of otolaryngologist.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2013-03-20</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">Text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/26</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+	</ListRecords>
+</OAI-PMH>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+		http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+	<responseDate>2013-06-27T17:40:42Z</responseDate>
+	<request verb="ListRecords" metadataPrefix="oai_dc">http://entscholar.net/index.php/index/oai</request>
+	<ListRecords>
+		<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/2</identifier>
+				<datestamp>2012-10-19T10:16:09Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/12</identifier>
+				<datestamp>2012-10-31T13:49:31Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/10</identifier>
+				<datestamp>2012-10-24T01:18:06Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Vertical Partial laryngectomy an atlas</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US"></dc:subject>
+	<dc:description xml:lang="en-US"> Vertical partial Laryngectomy is a conservative laryngeal surgical procedure whichinvolves removal of one half of the larynx while the other half is preserved. Thedead space created after removal of one half of the larynx is closed using variousflaps. This surgery was first proposed by Solis – Colen in 1869 to manage earlymalignant lesions involving vocal folds.Indications:1. Malignant tumors involving a single vocal cord early T1, T2 and select T3lesions2. Anterior commissure of the vocal cord should be free of the lesionThis surgery is not suitable for patients with growth vocal cord involving theanterior commissure and the opposite cord.This e book discusses the entire procedure of vertical partial laryngectomy usingphotographs. Download the full  book from here.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-23</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/7</dc:identifier>
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+	</ListRecords>
+</OAI-PMH>
