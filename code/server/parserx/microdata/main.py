@@ -79,7 +79,7 @@ def parse(inputFile, outputFile):
 		if matchObj2:
 			# output += '\t<md:itemprop type="' + matchObj2.group(2) + '">\n\t\t<md:url>' + matchObj2.group(4) + '</md:url>\n\t</md:itemprop>\n'
 			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
-			outputRdf += '\n\t\t<schema:image>' + matchObj2.group(4) + '</schema:image>'
+			outputRdf += '\n\t\t<schema:image rdf:resource="' + matchObj2.group(4) + '" />'
 		
 		# itemprop = name
 		if matchObj3:
@@ -186,7 +186,7 @@ def parse2(url, input):
 		# itemprop = image
 		if matchObj2:
 			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj2.group(2) + '">\n\t\t\t\t\t\t<md:url>' +  matchObj2.group(4) + '</md:url>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
-			outputRdf += '\n\t\t<schema:image>' + matchObj2.group(4) + '</schema:image>'
+			outputRdf += '\n\t\t<schema:image rdf:resource="' + matchObj2.group(4) + '" />'
 		
 		# itemprop = name
 		if matchObj3:
@@ -232,7 +232,7 @@ def run(url, input):
 	rdf = parse2(url, inputArray)
 	return rdf
 	
-"""
+
 def main():
 	if len(sys.argv) != 3:
 		print 'run as:\n\tpython main.py inputFile outputFile'
@@ -245,4 +245,3 @@ def main():
 		parse(inputFile, outputFile)
 
 main()
-"""
