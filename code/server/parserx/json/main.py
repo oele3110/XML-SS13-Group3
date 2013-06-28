@@ -18,11 +18,8 @@ def openWriteFile(file):
     f = open(file, 'w')
     return f
 
-"""def initXML():
-	return '<?xml version="1.1" encoding="UTF-8" standalone="yes"?>\n'"""
-
 def initRDF():
-	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:sioc="http://rdfs.org/sioc/ns#"\n\txmlns:dcterms="http://purl.org/dc/terms#"\n\txmlns:xsd="http://www.w3.org/2001/XMLSchema#">\n\t'
+	return '<?xml version="1.0"?>\n<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n\txmlns:sioc="http://rdfs.org/sioc/ns#"\n\txmlns:dcterms="http://purl.org/dc/terms#"\n\txmlns:xsd="http://www.w3.org/2001/XMLSchema#"\n\txmlns:gc="http://www.oegov.org/core/owl/gc#">\n\t'
 
 def getTimestamp():
 	return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S');
@@ -58,6 +55,24 @@ def parse(inputFile, outputFile, completeURL, userURL, splittedUrl):
     # sioc:content
     outputRdf += '<sioc:content>' + tmp[0]['text'] + '</sioc:content>\n\t\t'
     
+    # gc:hashtag
+    # if available
+    for post in tmp[0]['entities']['hashtags']:
+        hashtag = post.get('text')
+        outputRdf += '<gc:hashtag>' + hashtag + '</gc:hashtag>\n\t\t'
+    
+    # dcterms:references
+    # if available
+    for post2 in tmp[0]['entities']['urls']:
+        url = post2.get('url')
+        outputRdf += '<dcterms:references rdf:resource="' + url + '"/>\n\t\t'
+
+    # sioc:addressed_to
+    # if available
+    for post3 in tmp[0]['entities']['user_mentions']:
+        twitter_name = post3.get('screen_name')
+        outputRdf += '<sioc:addressed_to>' + twitter_name + '</sioc:addressed_to>\n\t\t'
+
     # sioc:num_replies
     outputRdf += '<sioc:num_replies>' + str(tmp[0]['retweet_count']) + '</sioc:num_replies>\n\t\t'
     
@@ -84,41 +99,6 @@ def parse(inputFile, outputFile, completeURL, userURL, splittedUrl):
     
     outputRdf = u''.join(outputRdf).encode('utf-8').strip()
     
-    
-    """# twitter-name
-    #output += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t'
-    outputRdf += '<twitter_name>' + tmp[0]['user']['screen_name'] + '</twitter_name>\n\t\t\t\t\t\t'
-    
-    # followers
-    #output += '<followers_count>' + str(tmp[0]['user']['followers_count']) + '</followers_count>\n\t\t'
-    outputRdf += '<followers_count>' + str(tmp[0]['user']['followers_count']) + '</followers_count>\n\t\t\t\t\t\t'
-    
-    # status
-    #output += '<statuses_count>' + str(tmp[0]['user']['statuses_count']) + '</statuses_count>\n\t' + '</user>\n\t'
-    outputRdf += '<statuses_count>' + str(tmp[0]['user']['statuses_count']) + '</statuses_count>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t' + '</user>\n\t\t\t\t'
-
-    # retweets
-    #output += '<retweet_count>' + str(tmp[0]['retweet_count']) + '</retweet_count>\n\t'
-    outputRdf += '<retweet_count>' + str(tmp[0]['retweet_count']) + '</retweet_count>\n\t\t\t\t'
-
-    # recent tweet
-    #output += '<text>' + tmp[0]['text'] + '</text>\n\t'
-    outputRdf += '<text>' + tmp[0]['text'] + '</text>\n\t\t\t\t'
-
-    # date
-    #output += '<created_at>' + tmp[0]['created_at'] + '</created_at>\n'
-    outputRdf += '<created_at>' + tmp[0]['created_at'] + '</created_at>\n\t\t\t</rdf:Description>\n\t\t'
-
-    # tail
-    #output += '</tweet>'
-    outputRdf += '</tweet>\n\t</rdf:Description>\n</rdf:RDF>'
-
-    #output = u''.join(output).encode('utf-8').strip()
-    outputRdf = u''.join(outputRdf).encode('utf-8').strip()
-    
-    #f = openWriteFile(outputFile)
-    #f.write(str(output))"""
-
     if __name__ == "__main__":
         f2 = openWriteFile(outputFile2)
         f2.write(str(outputRdf))
