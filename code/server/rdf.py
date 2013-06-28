@@ -4,6 +4,7 @@ from logging_wrapper import info
 import time
 
 DBNAME = "xml"
+PORT = 8000
 
 
 def createDatabase():
@@ -22,14 +23,30 @@ def deleteDatabase():
                 info("failure: "+DBNAME+" not deleted\n")
 
 
+def connectDatabaseHttp():
+	output = subprocess.call(["4s-httpd","-p " + str(PORT),DBNAME])
+        if output == 0:
+                info("connected to"+DBNAME+"\n")
+                return True
+        else:
+                info("failure: already connected to "+DBNAME+"\n")
+                return False
+
 def connectDatabase():
         output = subprocess.call(["4s-backend",DBNAME])
         if output == 0:
                 info("connected to"+DBNAME+"\n")
                 return True
         else:
-                info("failure: already connected to"+DBNAME+"\n")
+                info("failure: already connected to "+DBNAME+"\n")
                 return False
+
+def disconnectDatabaseHttp():
+        output = subprocess.call(["pkill","4s-httpd"])
+        if output == 0:
+                info("disconnected from"+DBNAME+"\n")
+        else:
+                info("failure: already disconnected to "+DBNAME+"\n")
 
 
 def disconnectDatabase():
@@ -38,7 +55,7 @@ def disconnectDatabase():
         if output == 0:
                 info("disconnected from"+DBNAME+"\n")
         else:
-                info("failure: already disconnected to"+DBNAME+"\n")
+                info("failure: already disconnected to "+DBNAME+"\n")
 
 
 def importDatasetsFile(file):
@@ -48,18 +65,36 @@ def importDatasetsFile(file):
         else:
                 info("failure: not able to add data\n")
 
+def importDatasetsFileHttp(file):
+	filename = os.path.split(file)[1]
+	hostStr = "'http://localhost:"+str(PORT)+"/data/"+filename+"'"
+	#output = subprocess.call(["curl", "-T", file, hostStr])
+	curlString = "curl -T " + str(file) + " " + hostStr
+	output = subprocess.call(curlString + " > /dev/null 2>&1", shell=True)
+        if output == 0:
+                info("data is added\n")
+        else:
+                info("failure: not able to add data: "+str(output)+"\n")
+		
+	#curl -T out.rdf 'http://localhost:8000/data/out.rdf'
+
 
 def importDatasets(data):
-        temp_file = str(time.time()) + "data.rdf"
+        temp_file = "data" + str(time.time()) + ".rdf"
         f = open(temp_file, "w")
         f.write(data)
         f.flush()
         f.close()
         
-        importDatasetsFile(temp_file)
+        #importDatasetsFile(temp_file)
+        importDatasetsFileHttp(temp_file)
         
         if os.path.isfile(temp_file):
             os.remove(temp_file)
+
+def queryDatabaseHttp(query):
+	output = subprocess.check_output(["sparql-query","localhost:"+str(PORT)+"/sparql/",query])
+	return output
 
 
 def queryDatabase(query):

@@ -8,11 +8,13 @@ HTTP_PORT = 8345
 PROXY_PORT = 8346
 
 def launch_servers():
-    rdf.disconnectDatabase()
-    if not rdf.connectDatabase():
-        rdf.createDatabase()
-        rdf.connectDatabase()
+    #rdf.disconnectDatabase()
+    #if not rdf.connectDatabase():
+    #    rdf.createDatabase()
+    #    rdf.connectDatabase()
 
+    rdf.disconnectDatabaseHttp()
+    rdf.connectDatabaseHttp()
 
     http_server = get_http_server(HTTP_PORT)
     proxy_server = get_proxy_server(PROXY_PORT)

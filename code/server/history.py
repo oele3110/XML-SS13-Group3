@@ -13,7 +13,9 @@ def getHistory():
 	pattern1 = '\s*<binding name="s"><uri>(.*)</uri></binding>\s*'
 	pattern2 = '\s*<binding name="o"><literal>(.*)</literal></binding>\s*'
 	
-	history = rdf.queryDatabase(query)
+	history = rdf.queryDatabaseHttp(query)
+	html = history
+	"""
 	resource = None
 	timestamp = None
 	dictionary = None
@@ -53,7 +55,7 @@ def getHistory():
         #f.write(html)
         #f.flush()
         #f.close()
-	
+	"""
 	return html
 
 #getHistory()
