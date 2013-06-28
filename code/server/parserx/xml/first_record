@@ -1,0 +1,70 @@
+<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/2</identifier>
+				<datestamp>2012-10-19T10:16:09Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header status="deleted">
+				<identifier>oai:drtbalu.entscholar.net:publicationFormat/12</identifier>
+				<datestamp>2012-10-31T13:49:31Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+		</record>
+		<record>
+			<header>
+				<identifier>oai:omp.entscholar.net:publicationFormat/4</identifier>
+				<datestamp>2012-10-19T13:44:00Z</datestamp>
+				<setSpec>otolaryngology</setSpec>
+			</header>
+			<metadata>
+<oai_dc:dc
+	xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+	<dc:title xml:lang="en-US">Epistaxis a review</dc:title>
+	<dc:creator>balasubramanian, drtbalu</dc:creator>
+	<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+	<dc:description xml:lang="en-US"> Epistaxis is defined as bleeding from the nasal cavity. It is actually a Greek word for nose bleed. Itis actually a very common problem and hence its incidence is rather difficult to access. Crudeestimates or its incidence ranges from 5 – 14% 1. The incidence of epistaxis also shows significantincrease during winter months / hot dry climates with low humidity. This climatic increase inincidence of epistaxis has been attributed to increase in the incidence of upper respiratory tractinfections. Forceful blowing of inflammated nasal mucosa provokes epistaxis in these patients 2.Classically epistaxis is known to manifest bimodal incidence – with peaks in age groups of 2-10 and60-80. Only a small percentage of this population seek Otolaryngologist intervention. Thisamounts to about 1% of all patients with nasal bleed 3.You can download the complete book from here.  About the author:  Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology.</dc:description>
+	<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+	<dc:date>2012-10-19</dc:date>
+	<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+	<dc:type xml:lang="en-US">text</dc:type>
+	<dc:format>Digital</dc:format>
+	<dc:identifier>http://entscholar.net/index.php/otolaryngology/catalog/book/3</dc:identifier>			-->> SUBJEKT
+	<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+	<dc:coverage xml:lang="en-US">International</dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+	<dc:coverage xml:lang="en-US"></dc:coverage>
+</oai_dc:dc>
+			</metadata>
+		</record>
+		
+		
+		UMWANDELN ZU:	(UND DAS FÜR ALLE RECORDS)
+		
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<rdf:Description rdf:about="http://entscholar.net/index.php/otolaryngology/catalog/book/3">
+		<dc:title xml:lang="en-US">Epistaxis a review</dc:title>
+		<dc:creator>balasubramanian, drtbalu</dc:creator>
+		<dc:subject xml:lang="en-US">Rhinology</dc:subject>
+		<dc:description xml:lang="en-US"> Epistaxis is defined as bleeding from the nasal cavity. It is actually a Greek word for nose bleed. Itis actually a very common problem and hence its incidence is rather difficult to access. Crudeestimates or its incidence ranges from 5 – 14% 1. The incidence of epistaxis also shows significantincrease during winter months / hot dry climates with low humidity. This climatic increase inincidence of epistaxis has been attributed to increase in the incidence of upper respiratory tractinfections. Forceful blowing of inflammated nasal mucosa provokes epistaxis in these patients 2.Classically epistaxis is known to manifest bimodal incidence – with peaks in age groups of 2-10 and60-80. Only a small percentage of this population seek Otolaryngologist intervention. Thisamounts to about 1% of all patients with nasal bleed 3.You can download the complete book from here.  About the author:  Author is a senior faculty in the department of Otolaryngology Stanley MedicalCollege Chennai India, with rich experience in teaching and training undergraduateand post graduate students. He has also created a few online teaching resource sitesfor the benefit of students of otolaryngology.</dc:description>
+		<dc:publisher xml:lang="en-US">Otolaryngology online</dc:publisher>
+		<dc:date>2012-10-19</dc:date>
+		<dc:type xml:lang="en-US">Peer-reviewed Article</dc:type>
+		<dc:type xml:lang="en-US">text</dc:type>
+		<dc:format>Digital</dc:format>
+		<dc:source xml:lang="en-US">Otolaryngology online; </dc:source>
+		<dc:coverage xml:lang="en-US">International</dc:coverage>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://entscholar.net/index.php/otolaryngology/catalog/book/3">
+		<xsd:dateTime>2013-06-25 14:45:52</xsd:dateTime>
+	</rdf:Description>
+</rdf:RDF>
