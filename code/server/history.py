@@ -10,9 +10,6 @@ def buildFooter():
 def getHistory():
 	
 	query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT * WHERE {?s xsd:dateTime ?o}"
-	#pattern1 = '\s*<binding name="s"><uri>(.*)</uri></binding>\s*'
-	#pattern2 = '\s*<binding name="o"><literal>(.*)</literal></binding>\s*'
-	pattern = '|\s*<(.*)>\s*|\s*(.*)\s*|'
 	pattern = '.*<(.*)>.*(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}).*'
 	
 	history = rdf.queryDatabaseHttp(query)
