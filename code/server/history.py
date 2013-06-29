@@ -37,11 +37,7 @@ def getHistory():
 				dictionary = tempDict
 			else:
 				dictionary.update(tempDict)
-		
-		#if resource and timestamp:
-		#	resource = None
-		#	timestamp = None
-	
+
 	for key in sorted(dictionary.iterkeys(), reverse = True):
 		#print key + "\t" + dictionary[key]
 		html += "<p>" + key + " : <a href=\"" + dictionary[key] + "\">" + dictionary[key] + "</a></p>\n"
