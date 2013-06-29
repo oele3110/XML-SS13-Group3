@@ -43,4 +43,4 @@ def getHistory():
 	
 	return html
 
-getHistory()
+#getHistory()
