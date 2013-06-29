@@ -4,20 +4,19 @@
 	xmlns:dcterms="http://purl.org/dc/terms#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:gc="http://www.oegov.org/core/owl/gc#">
-	<rdf:Description rdf:about="http://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin&amp;count=4">
-		<xsd:dateTime>2013-06-29 17:15:35</xsd:dateTime>
+	<rdf:Description rdf:about="http://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin&amp;count=1">
+		<xsd:dateTime>2013-06-29 18:11:04</xsd:dateTime>
 		<dcterms:publisher rdf:resource="http://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin"/>
 		<sioc:content>#S75 Abfahrt #Wartenberg 17:26 Uhr nach #Ostbahnhof fällt leider aus.</sioc:content>
 		<gc:hashtag>S75</gc:hashtag>
 		<gc:hashtag>Wartenberg</gc:hashtag>
 		<gc:hashtag>Ostbahnhof</gc:hashtag>
-		<dcterms:references rdf:resource="http://t.co/BrReBATodd"/>
 		<sioc:num_replies>0</sioc:num_replies>
 		<dcterms:created_at>Sat Jun 29 15:03:25 +0000 2013</dcterms:created_at>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=sbahnberlin">
 		<sioc:name>SBahnBerlin</sioc:name>
 		<sioc:account_of>DB S-Bahn Berlin</sioc:account_of>
-		<sioc:num_items>28920</sioc:num_items>
+		<sioc:num_items>28918</sioc:num_items>
 	</rdf:Description>
 </rdf:RDF>
