@@ -85,7 +85,7 @@ def parse(inputFile, outputFile):
 		if matchObj3:
 			# output += '\t<itemprop type="' + matchObj3.group(2) + '">\n\t\t<md:content>' + matchObj3.group(3) + '</content>\n\t</md:itemprop>\n'
 			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
-			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt; </schema:name>'
+			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + (matchObj3.group(4).replace("&","&amp;")).replace("<","&lt;") + '&lt;/a&gt; </schema:name>'
 		
 		# itemprop = description
 		if matchDescr:
@@ -93,13 +93,13 @@ def parse(inputFile, outputFile):
 			# <p>
 			if matchObj5:
 				# output += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
-				outputRdf += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += '&lt;p&gt;' + (matchObj5.group(1).replace("&","&amp;")).replace("<","&lt;") + "&lt;/p&gt;\\n\\n"
 			elif matchObj6a:
 				# output += '&lt;p&gt;' + matchObj6a.group(1) + " "
-				outputRdf += '&lt;p&gt;' + matchObj6a.group(1) + " "
+				outputRdf += '&lt;p&gt;' + (matchObj6a.group(1).replace("&","&amp;")).replace("<","&lt;") + " "
 			elif matchObj6b:
 				# output += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
-				outputRdf += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += (matchObj6b.group(1).replace("&","&amp;")).replace("<","&lt;") + "&lt;/p&gt;\\n\\n"
 			# <code>
 			elif matchObj7a:
 				match7a = True
@@ -191,18 +191,18 @@ def parse2(url, input):
 		# itemprop = name
 		if matchObj3:
 			# outputRdf += '\n\t\t\t\t<md:itemprop>\n\t\t\t\t\t<rdf:Description rdf:about="#' + matchObj3.group(2) + '">\n\t\t\t\t\t\t<md:text>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt;</md:text>\n\t\t\t\t\t</rdf:Description>\n\t\t\t\t</md:itemprop>'
-			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + matchObj3.group(4) + '&lt;/a&gt; </schema:name>'
+			outputRdf += '\n\t\t<schema:name>&lt;a href ="' + matchObj3.group(3) + '"&gt;' + (matchObj3.group(4).replace("&","&amp;")).replace("<","&lt;") + '&lt;/a&gt; </schema:name>'
 		
 		# itemprop = description
 		if matchDescr:
 			
 			# <p>
 			if matchObj5:
-				outputRdf += '&lt;p&gt;' + matchObj5.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += '&lt;p&gt;' + (matchObj5.group(1).replace("&","&amp;")).replace("<","&lt;") + "&lt;/p&gt;\\n\\n"
 			elif matchObj6a:
-				outputRdf += '&lt;p&gt;' + matchObj6a.group(1) + " "
+				outputRdf += '&lt;p&gt;' + (matchObj6a.group(1).replace("&","&amp;")).replace("<","&lt;") + " "
 			elif matchObj6b:
-				outputRdf += matchObj6b.group(1) + "&lt;/p&gt;\\n\\n"
+				outputRdf += (matchObj6b.group(1).replace("&","&amp;")).replace("<","&lt;") + "&lt;/p&gt;\\n\\n"
 			# <code>
 			elif matchObj7a:
 				match7a = True
