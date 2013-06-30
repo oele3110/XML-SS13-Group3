@@ -15,13 +15,13 @@
        //// Query settings. The defaults settings are listed.
        sgvizler.option.query = {
            // Default query. 
-           //'query':                "SELECT ?class (count(?instance) AS ?noOfInstances)\nWHERE{ ?instance a ?class }\nGROUP BY ?class\nORDER BY ?class",
+           //'query':                "SELECT * WHERE {?s ?p ?o} LIMIT 2",
     
            // Endpoint URL. 
-           //'endpoint':             "http://sws.ifi.uio.no/sparql/world",
+           //'endpoint':             "http://localhost:8000/sparql/",
     
            // Endpoint output format. 
-           //'endpoint_output':      'json',  // 'xml', 'json' or 'jsonp'
+           //'endpoint_output':      'xml',  // 'xml', 'json' or 'jsonp'
     
            // This string is appended the 'endpoint' variable and the query to it again to give a link to the "raw" query results.
            //'endpoint_query_url':   "?output=text&amp;query=",
