@@ -1,6 +1,7 @@
 from lxml import etree
 from StringIO import StringIO
 import datetime
+from xml.sax.saxutils import escape
 
 XSLT_STYLESHEET = ""
 
@@ -37,7 +38,7 @@ def createStylesheet(url):
 	         
 	              <xsl:element name="rdf:Description">
 	                  <xsl:attribute name="rdf:about">
-	                      <xsl:text>'''+url+'''</xsl:text>
+	                      <xsl:text>'''+escape(url)+'''</xsl:text>
 	                  </xsl:attribute><xsl:text>&#xa;</xsl:text>
 			          <xsl:for-each select="//oai_dc:dc">
 	                      <xsl:element name="dc:references">
@@ -46,7 +47,7 @@ def createStylesheet(url):
                               </xsl:attribute>
 	                      </xsl:element><xsl:text>&#xa;</xsl:text>
 	                  </xsl:for-each>
-	              <xsl:element name="xsd:dateTime">'''+getTimestamp()+'''</xsl:element><xsl:text>&#xa;</xsl:text>
+	              <xsl:element name="xsd:dateTime">'''+escape(getTimestamp())+'''</xsl:element><xsl:text>&#xa;</xsl:text>
 	              </xsl:element><xsl:text>&#xa;</xsl:text>
 	
 	              <xsl:apply-templates />
@@ -59,15 +60,18 @@ def createStylesheet(url):
 </xsl:stylesheet>'''
 
 
-def get_xslt_tree():
-    xslt_root = etree.XML(XSLT_STYLESHEET)
+def get_xslt_tree(url):
+    xslt_root = etree.XML(createStylesheet(url))
     return etree.XSLT(xslt_root)
 
-def parse_string(s):
+def parse_string(url, s):
+    #bugfix
+    s = s.replace("http://www.openarchives.org/OAI/2.0/", "", 1)
+
     f = StringIO(s)
     d = etree.parse(f)
     
-    result = get_xslt_tree()(d)
+    result = get_xslt_tree(url)(d)
     if result:
         return str(result)
     else:
@@ -76,18 +80,14 @@ def parse_string(s):
 
 
 if __name__ == "__main__":
-    #hier muss der proxy die url uebergeben
-    XSLT_STYLESHEET = createStylesheet("HTTP-DAS-IST-EIN-TEST")
-
     #f = open("first_record_input.xml")
     #f = open("entscholar_List_Records_min.xml")
-    f = open("entscholar_List_Records.xml")
+    #f = open("entscholar_List_Records.xml")
   
+    f = open("/tmp/a")
+
     s = f.read()
     f.close()
 
-    #bugfix
-    s = s.replace("http://www.openarchives.org/OAI/2.0/", "", 1)
-
-    out = parse_string(s)
+    out = parse_string("test", s)
     print len(out), out

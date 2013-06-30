@@ -158,9 +158,14 @@ class ProxyRequest(http.Request):
             "content-encoding")
         content_types = self.responseHeaders.getRawHeaders(
             "content-type")
+        #print self.host.host
+        #print content_encoding, content_types
         gzipped = data and content_encoding\
             and any([x.find("gzip") >= 0 for x in content_encoding])\
-            and content_types and any([x.find("text/html") >= 0 for x in content_types])
+            and content_types and (
+            any([x.find("text/html") >= 0 for x in content_types]) or 
+            any([x.find("text/xml") >= 0 for x in content_types])
+            )
 
         if gzipped:
             import gzip

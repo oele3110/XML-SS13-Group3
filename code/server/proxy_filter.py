@@ -3,6 +3,7 @@ __all__=["filter"]
 from logging_wrapper import *
 from parserx.microdata import main
 from parserx.linkeddata import linkeddata
+from parserx.xml import parser2
 import rdf
 
 def filter(request, data):
@@ -20,6 +21,10 @@ def filter(request, data):
 	    elif request.host.host == "dbpedia.org":
 		info("DBPEDIA URI: "+request.uri)
 		rdf_ = linkeddata.run(request.uri)
+		rdf.importDatasets(rdf_)
+	    elif request.host.host.find("entscholar.net") >= 0:
+		info("Entscholar URI: "+request.uri)
+		rdf_ = parser2.parse_string(request.uri, data)
 		rdf.importDatasets(rdf_)
 	    else:
                 info("Unknown content type, skip filtering")
