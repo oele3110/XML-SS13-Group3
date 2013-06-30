@@ -18,6 +18,7 @@ def createStylesheet(url):
 	     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
 	     <xsl:template match="ListRecords/record/metadata">
 	         <xsl:element name="rdf:Description">
 	             <xsl:attribute name="rdf:about">
@@ -47,15 +48,14 @@ def createStylesheet(url):
                               </xsl:attribute>
 	                      </xsl:element><xsl:text>&#xa;</xsl:text>
 	                  </xsl:for-each>
-	              <xsl:element name="xsd:dateTime">'''+escape(getTimestamp())+'''</xsl:element><xsl:text>&#xa;</xsl:text>
+	                  <xsl:element name="xsd:dateTime">'''+escape(getTimestamp())+'''</xsl:element><xsl:text>&#xa;</xsl:text>
 	              </xsl:element><xsl:text>&#xa;</xsl:text>
 	
 	              <xsl:apply-templates />
 	         </rdf:RDF>
-
 	     </xsl:template>
-	     <xsl:template match="text()|@*">
 
+	     <xsl:template match="text()|@*">
 	     </xsl:template>
 </xsl:stylesheet>'''
 
