@@ -244,4 +244,5 @@ def main():
 		print 'start parsing file'
 		parse(inputFile, outputFile)
 
-main()
+if __name__ == "__main__":
+	main()

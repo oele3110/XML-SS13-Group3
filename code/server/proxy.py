@@ -86,14 +86,37 @@ class ProxyClient(http.HTTPClient):
             self.originalRequest.responseHeaders.addRawHeader(key, value)
 
     def handleResponse(self, data):
-        if self.originalRequest.host.host == "api.twitter.com":
+        if self.originalRequest.host.host == "api.twitter.com" and \
+                self.originalRequest.uri.find("screen_name=") > 0:
             from parserx.json import main
             data, rdf_ = main.main(self.uri)
-            rdf.importDatasets(rdf_)
-            #self.originalRequest.responseHeaders.setRawHeaders(
-            #    "content-type", ["application/json"])
-            self.originalRequest.responseHeaders.setRawHeaders(
-                "content-encoding", [])
+            #rdf.importDatasets(rdf_)
+
+            uri_ = str(self.originalRequest.uri)
+            index1 = uri_.find("screen_name=")+len("screen_name=")
+            index2 = uri_.find("&", index1)
+            url_ = "https://twitter.com/%s" % uri_[index1:index2]
+
+            from logging_wrapper import info
+            import urllib2
+
+            info("Fetch twitter url: %s" % url_)
+            response = urllib2.urlopen(url_)
+            page = response.read()
+
+            info("Got twitter response")
+
+            if page:
+                data = page
+                self.originalRequest.responseHeaders.setRawHeaders(
+                    "content-type", ["text/html"])
+                self.originalRequest.responseHeaders.setRawHeaders(
+                    "content-encoding", [])
+            else:
+                #self.originalRequest.responseHeaders.setRawHeaders(
+                #    "content-type", ["application/json"])
+                self.originalRequest.responseHeaders.setRawHeaders(
+                    "content-encoding", [])
 
         data = self.originalRequest.processResponse(data)
         if self.contentLength != None:
@@ -158,7 +181,7 @@ class ProxyRequest(http.Request):
             "content-encoding")
         content_types = self.responseHeaders.getRawHeaders(
             "content-type")
-        #print self.host.host
+        info("Got: %s, %s" % (self.host.host, self.uri))
         #print content_encoding, content_types
         gzipped = data and content_encoding\
             and any([x.find("gzip") >= 0 for x in content_encoding])\
