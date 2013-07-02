@@ -24,7 +24,8 @@ def deleteDatabase():
 
 
 def connectDatabaseHttp():
-	output = subprocess.call(["4s-httpd","-p " + str(PORT),DBNAME])
+	#output = subprocess.call(["4s-httpd","-p " + str(PORT),DBNAME])
+	output = subprocess.call("4s-httpd -X -p " + str(PORT) + " " + DBNAME + " > /dev/null 2>&1", shell=True)
         if output == 0:
                 info("connected to"+DBNAME+"\n")
                 return True
