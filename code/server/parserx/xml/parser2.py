@@ -66,7 +66,7 @@ def get_xslt_tree(url):
 
 def parse_string(url, s):
     #bugfix
-    s = s.replace("http://www.openarchives.org/OAI/2.0/", "", 1)
+    #s = s.replace("http://www.openarchives.org/OAI/2.0/", "", 1)
 
     f = StringIO(s)
     d = etree.parse(f)
