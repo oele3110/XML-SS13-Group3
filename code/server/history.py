@@ -34,11 +34,14 @@ def getHistory():
 				dictionary = tempDict
 			else:
 				dictionary.update(tempDict)
-
-	for key in sorted(dictionary.iterkeys(), reverse = True):
-		#print key + "\t" + dictionary[key]
-		html += "<p>" + key + " : <a href=\"" + dictionary[key] + "\">" + dictionary[key] + "</a></p>\n"
 	
+	if dictionary:	
+		for key in sorted(dictionary.iterkeys(), reverse = True):
+			#print key + "\t" + dictionary[key]
+			html += "<p>" + key + " : <a href=\"" + dictionary[key] + "\">" + dictionary[key] + "</a></p>\n"
+	else:
+		html += "<p>no history</p>"
+
 	html += buildFooter()
 	
 	return html
