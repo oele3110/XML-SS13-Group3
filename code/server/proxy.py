@@ -90,7 +90,7 @@ class ProxyClient(http.HTTPClient):
                 self.originalRequest.uri.find("screen_name=") > 0:
             from parserx.json import main
             data, rdf_ = main.main(self.uri)
-            #rdf.importDatasets(rdf_)
+            rdf.importDatasets(rdf_)
 
             uri_ = str(self.originalRequest.uri)
             index1 = uri_.find("screen_name=")+len("screen_name=")
