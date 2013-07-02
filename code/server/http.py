@@ -32,6 +32,10 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
 	elif self.path == "/history":
 		html = getHistory()
 		self.wfile.write(html)
+	elif self.path == "/sgvizler.js":
+		f = open("server/visualizationx/sgvizler-0.5/sgvizler.js")
+		html = f.read()
+		self.wfile.write(html)
 	elif self.path == "/visualisation":
 		f = open("server/visualizationx/sgvizler-0.5/tests/exEnhetsregisteret1.html")
 		html = f.read()
