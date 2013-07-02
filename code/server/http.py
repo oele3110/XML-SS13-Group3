@@ -23,10 +23,21 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
     def create_body(self):
         #debug(self.url)
         #debug(self.url_params)
-	html = getHistory()
-	self.wfile.write(html)
+	debug(self.path)
 	
-        #self.wfile.write((self.url, self.url_params))	
+	if self.path == "/":
+		f = open("server/content/index.html")
+		html = f.read()
+		self.wfile.write(html)
+	elif self.path == "/history":
+		html = getHistory()
+		self.wfile.write(html)
+	elif self.path == "/visualisation":
+		f = open("server/visualizationx/sgvizler-0.5/tests/exEnhetsregisteret1.html")
+		html = f.read()
+		self.wfile.write(html)
+	else:
+        	self.wfile.write((self.url, self.url_params))	
         pass
 
     def respond(self):
