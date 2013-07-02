@@ -36,8 +36,24 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
 		f = open("server/visualizationx/sgvizler-0.5/sgvizler.js")
 		html = f.read()
 		self.wfile.write(html)
+	elif self.path == "/sgvizler.chart.css":
+		f = open("server/visualizationx/sgvizler-0.5/sgvizler.chart.css")
+		html = f.read()
+		self.wfile.write(html)
+	elif self.path == "/lib/raphael-dracula.pack.min":
+		f = open("server/visualizationx/sgvizler-0.5/lib/raphael-dracula.pack.min")
+		html = f.read()
+		self.wfile.write(html)
+	elif self.path == "/lib/d3.v2.min.js":
+		f = open("server/visualizationx/sgvizler-0.5/lib/d3.v2.min.js")
+		html = f.read()
+		self.wfile.write(html)
 	elif self.path == "/visualisation":
 		f = open("server/visualizationx/sgvizler-0.5/tests/exEnhetsregisteret1.html")
+		html = f.read()
+		self.wfile.write(html)
+	elif self.path == "/pieChart":
+		f = open("server/visualizationx/sgvizler-0.5/tests/pieChart.html")
 		html = f.read()
 		self.wfile.write(html)
 	else:
