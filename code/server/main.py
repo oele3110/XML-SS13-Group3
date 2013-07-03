@@ -15,6 +15,7 @@ def launch_servers():
 
     rdf.disconnectDatabaseHttp()
     rdf.connectDatabaseHttp()
+    rdf.connectDatabase()
 
     http_server = get_http_server(HTTP_PORT)
     proxy_server = get_proxy_server(PROXY_PORT)
