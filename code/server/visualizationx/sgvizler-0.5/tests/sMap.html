@@ -42,6 +42,22 @@ UNION
     ?url geo:lat ?lat .
     ?url geo:long ?long .
 }
+UNION
+
+{
+    ?url dbpedia-owl:country db:Germany .
+    ?url dbpprop:centre ?name .
+    ?url geo:lat ?lat .
+    ?url geo:long ?long .
+}
+UNION
+
+{
+    ?url dbpedia-owl:country db:Germany .
+    ?url dbpprop:location ?name .
+    ?url geo:lat ?lat .
+    ?url geo:long ?long .
+}
 }" data-sgvizler-chart="sMap" data-sgvizler-loglevel="2" style="width:1200px; height:500px;"></div>
       <p>The element which draws the above chart:</p><pre id="sgvzl_example_pre">&lt;div id="sgvzl_example_query" 
    data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/enhetsregisteret" 
@@ -68,6 +84,22 @@ UNION
 {
     ?url dbpedia-owl:country db:Germany .
     ?url dbpprop:name ?name .
+    ?url geo:lat ?lat .
+    ?url geo:long ?long .
+}
+UNION
+
+{
+    ?url dbpedia-owl:country db:Germany .
+    ?url dbpprop:centre ?name .
+    ?url geo:lat ?lat .
+    ?url geo:long ?long .
+}
+UNION
+
+{
+    ?url dbpedia-owl:country db:Germany .
+    ?url dbpprop:centre ?name .
     ?url geo:lat ?lat .
     ?url geo:long ?long .
 }
