@@ -4,6 +4,7 @@
 sudo apt-get install build-essential libpcre3-dev librasqal3-dev libtool libraptor1-dev libglib2.0-dev ncurses-dev libreadline-dev
 
 # get 4store
+wget http://4store.org/download/4store-v1.1.5.tar.gz
 tar -zxvf 4store-v1.1.5.tar.gz
 cd 4store-v1.1.5/
 
