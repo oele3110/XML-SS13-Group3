@@ -52,10 +52,15 @@ class ResourceServerHandler(BaseHTTPRequestHandler):
 		f = open("server/visualizationx/sgvizler-0.5/tests/exEnhetsregisteret1.html")
 		html = f.read()
 		self.wfile.write(html)
+	elif self.path == "/sMap":
+		f = open("server/visualizationx/sgvizler-0.5/tests/sMap.html")
+		html = f.read()
+		self.wfile.write(html)
 	elif self.path == "/pieChart":
 		f = open("server/visualizationx/sgvizler-0.5/tests/pieChart.html")
 		html = f.read()
 		self.wfile.write(html)
+
 	else:
         	self.wfile.write((self.url, self.url_params))	
         pass
