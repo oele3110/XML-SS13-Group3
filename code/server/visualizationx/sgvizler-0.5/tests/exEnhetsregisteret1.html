@@ -19,7 +19,15 @@
       <h3><code>rdGraph</code>: The roles of the persons in the board of Akershus Arbeiderparti
       </h3>
       <p></p>
-      <div id="sgvzl_example_query" data-sgvizler-endpoint="http://localhost:8000/sparql/" data-sgvizler-query="SELECT * WHERE {?s ?p ?o} LIMIT 5" data-sgvizler-chart="rdGraph" data-sgvizler-loglevel="2" style="width:1200px; height:500px;"></div>
+      <div id="sgvzl_example_query" data-sgvizler-endpoint="http://localhost:8000/sparql/" data-sgvizler-query="PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/TR/rdf-plain-literal/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+
+SELECT * WHERE 
+{
+ <http://stackoverflow.com/questions/17435915/caret-package-createdatapartition-function-function-of-square-brackets> ?p ?o
+}" data-sgvizler-chart="rdGraph" data-sgvizler-endpoint_output='json' data-sgvizler-loglevel="2" style="width:1200px; height:500px;"></div>
 
 	<p>The element which draws the above chart:</p><pre id="sgvzl_example_pre">&lt;div id="sgvzl_example_query" 
    data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/enhetsregisteret" 
@@ -27,7 +35,7 @@
    data-sgvizler-chart="rdGraph" 
    data-sgvizler-loglevel="2" 
    style="width:1200px; height:500px;"/&gt;</pre><h3>The results of the query in <code>gTable</code></h3>
-      <div id="sgvzl_example_table" data-sgvizler-endpoint="http://localhost:8000/sparql/" data-sgvizler-query="SELECT * WHERE {?s ?p ?o} LIMIT 5" data-sgvizler-chart="gTable" data-sgvizler-endpoint_output='json' data-sgvizler-loglevel="2" style="width:800px; height:200px;"></div>
+      <div id="sgvzl_example_table" data-sgvizler-endpoint="http://localhost:8000/sparql/" data-sgvizler-query="SELECT * WHERE {?s ?p ?o} LIMIT 1" data-sgvizler-chart="gTable" data-sgvizler-endpoint_output='json' data-sgvizler-loglevel="2" style="width:800px; height:200px;"></div>
 	<!-- http://klingenm.no-ip.org:3030/ds/query -->
       <div id="footer">
          <!--Please leave a link to the Sgvizler homepage.-->
